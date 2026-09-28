@@ -261,6 +261,7 @@ table.nightly td:first-child{font-weight:500}
 table.tiers{min-width:640px}
 .tier{display:inline-block;font-size:11px;font-weight:700;color:var(--gold-text);background:var(--gold-wash);border-radius:4px;padding:0 6px;margin-right:6px;vertical-align:1px}
 table.tiers td b a{color:inherit}
+td.num .p{white-space:nowrap}
 .optday{margin-top:18px}
 .optday h4{font-size:14.5px;margin:0 0 8px}
 .optgrid{display:grid;grid-template-columns:1fr;gap:10px}
@@ -271,6 +272,7 @@ table.tiers td b a{color:inherit}
 .opt .curtag{font-size:11px;font-weight:700;color:var(--accent-text);margin-left:4px}
 .opt .price{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-weight:600;font-size:13.5px;margin:3px 0 0;color:var(--ink)}
 .opt p{font-size:12.5px;color:var(--ink-2);margin:4px 0 0}
+.opt p.lnk{margin-top:8px;padding-top:6px;border-top:1px solid var(--line);font-weight:500}
 
 /* budget */
 .budget td:first-child{width:40%}
@@ -344,8 +346,8 @@ footer a{color:var(--ink-2)}
   <p class="lede">하카타에 숙소를 두고 렌터카 한 대로 세 코스를 도는 3박 4일 일정입니다. 기본인 A안(11/20~23)은 첫날 공항에서 곧장 오후 스루 라운드, 둘째 날 아침 라운드 뒤 온천과 이자카야, 셋째 날 명문 코스와 회식입니다. 11/23 일본 공휴일을 피해 하루 당긴 B안(11/19~22)도 함께 넣었으니 비교해 보세요.</p>
   <ul class="hero-meta">
     <li><b>이동</b>렌터카 1대 (노아·복시급)</li>
-    <li><b>숙소</b>하카타역~나카스</li>
-    <li><b>1인 현지 경비</b>A안 약 ¥15만~20만 · B안 약 ¥14만~18만 (항공 별도)</li>
+    <li><b>숙소</b>하카타·텐진·나카스 도심, 4인</li>
+    <li><b>1인 현지 경비</b>A안 약 ¥15만~19만 · B안 약 ¥13만~18만 (항공 별도)</li>
   </ul>
 </header>
 
@@ -360,7 +362,7 @@ footer a{color:var(--ink-2)}
     <li><a href="#day3">A안 3일차</a></li>
     <li><a href="#day4">A안 4일차</a></li>
     <li><a href="#planb">B안 일정</a></li>
-    <li><a href="#transport">교통비</a></li>
+    <li><a href="#transport">렌터카</a></li>
     <li><a href="#stay">숙소</a></li>
     <li><a href="#food">맛집</a></li>
     <li><a href="#tips">예약 팁</a></li>
@@ -415,19 +417,6 @@ footer a{color:var(--ink-2)}
     </div>
   </div>
 
-  <h3>왜 마쓰야마가 아니라 후쿠오카인가</h3>
-  <div class="tbl-wrap">
-    <table>
-      <thead><tr><th scope="col">기준</th><th scope="col">후쿠오카</th><th scope="col">마쓰야마</th></tr></thead>
-      <tbody>
-        <tr><td>인천발 항공편</td><td>하루 23~25편, 첫 편 06:00 출발</td><td>제주항공 하루 2편 (07:00, 13:15 출발)</td></tr>
-        <tr><td>이번 주말 골프장</td><td>공항·시내에서 40분 거리에 선택지가 많음</td><td>대표 코스 엘리에르 GC 마쓰야마는 11/19~22 여자 투어 대회로 이용 불가</td></tr>
-        <tr><td>먹거리 · 밤</td><td>야타이, 모츠나베, 나카스</td><td>조용한 편</td></tr>
-        <tr><td>온천</td><td>시내 온천 호텔과 당일 온천</td><td>도고 온천이 강점</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p style="margin-top:10px">첫날 라운드와 저녁 동선까지 생각하면 후쿠오카가 낫습니다. 마쓰야마는 도고 온천 중심의 느긋한 여행에 어울리는데, 이번 주말에는 대표 코스가 대회로 막혀 있습니다.</p>
 </section>
 
 <!-- ===== COMPARE ===== -->
@@ -450,26 +439,12 @@ footer a{color:var(--ink-2)}
         <tr><th scope="row">연차</th><td>금 · 월 (평일 2일)</td><td>목 · 금 (평일 2일)</td></tr>
         <tr><th scope="row">예약</th><td>토·일 모두 주말이라 티타임·객실이 부족</td><td>주말은 토요일 하루</td></tr>
         <tr><th scope="row">저녁 식당</th><td>일요일 휴무 식당 주의 (미즈타키 나가노, 신미우라 등)</td><td>일요일 저녁 일정이 없음</td></tr>
-        <tr><th scope="row">현지 경비</th><td class="mono">¥150,000~195,300<span class="p">약 131만~170만 원</span></td><td class="mono"><b>¥137,500~182,800</b><span class="p">약 120만~159만 원</span></td></tr>
-        <tr><th scope="row">항공 포함</th><td class="mono">약 169만~214만 원</td><td class="mono"><b>약 162만~208만 원</b></td></tr>
+        <tr><th scope="row">현지 경비</th><td class="mono">¥146,000~194,600<span class="p">약 127만~169만 원</span></td><td class="mono"><b>¥133,200~182,100</b><span class="p">약 116만~158만 원</span></td></tr>
+        <tr><th scope="row">항공 포함</th><td class="mono">약 165만~213만 원</td><td class="mono"><b>약 158만~207만 원</b></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small" style="margin-top:8px">1인 기준, 호텔은 아파~칸데오급 2인 1실입니다. 항공은 아래 아침편 3개의 왕복 요금 범위입니다. 자세한 내역은 <a href="#budget">예산</a>에 있습니다.</p>
-
-  <h3>호텔 날짜별 요금 (1실 2인, 조식 제외)</h3>
-  <div class="tbl-wrap">
-    <table class="nightly">
-      <caption class="sr-only">호텔 세 곳의 11월 19일부터 22일까지 1박 요금</caption>
-      <thead><tr><th scope="col">호텔</th><th scope="col" class="num">목 11/19<br><span class="small">B안만</span></th><th scope="col" class="num">금 11/20</th><th scope="col" class="num">토 11/21</th><th scope="col" class="num">일 11/22<br><span class="small">A안만</span></th></tr></thead>
-      <tbody>
-        <tr><td>칸데오 호텔 후쿠오카 텐진</td><td class="num">¥31,400<span class="p">트윈</span></td><td class="num">¥35,400<span class="p">트윈</span></td><td class="num">¥49,900<span class="p">더블 (트윈 만실)</span></td><td class="num">¥39,400<span class="p">킹 (트윈 만실)</span></td></tr>
-        <tr><td>도미인 PREMIUM 하카타 캐널시티마에</td><td class="num">¥39,550<span class="p">더블</span></td><td class="num">¥46,330<span class="p">더블</span></td><td class="num">만실</td><td class="num">¥48,590<span class="p">더블</span></td></tr>
-        <tr><td>니시테쓰 호텔 크룸 하카타</td><td class="num">¥28,200<span class="p">더블</span></td><td class="num">¥31,600<span class="p">트윈</span></td><td class="num">만실</td><td class="num">만실</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small" style="margin-top:8px">9월 28일 라쿠텐 트래블 조회 기준입니다. 일요일 밤이 목요일 밤보다 1실 ¥8,000~9,000 비싸서, 2인 1실이면 1인 ¥4,000~4,500 차이가 납니다.</p>
+  <p class="small" style="margin-top:8px">1인 기준, 호텔은 도심 호텔 4곳(아파 하카타역 동쪽 ~ 칸데오 텐진)의 2인 1실 요금입니다. 항공은 아래 아침편 3개의 왕복 요금 범위입니다. 자세한 내역은 <a href="#budget">예산</a>에 있습니다.</p>
 
   <h3>나머지 비용</h3>
   <ul class="plain">
@@ -532,7 +507,7 @@ footer a{color:var(--ink-2)}
         <div><dt>코스</dt><dd>27홀 · 벤트 원그린 · 산악형</dd></div>
         <div><dt>평점</dt><dd>GORA 리뷰 1,211건. 2026년 7~9월 리뷰는 대부분 4~5점</dd></div>
         <div><dt>요금 (금·목)</dt><dd>스루 ¥15,000 (목요일도 같음). 스테이크 점심이 포함된 플랜은 ¥17,460</dd></div>
-        <div><dt>예약</dt><dd>라쿠텐 GORA. 해외 고객은 연락 가능한 휴대폰 번호나 이메일을 등록해야 예약이 됨</dd></div>
+        <div><dt>예약</dt><dd><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400033/">라쿠텐 GORA</a>. 해외 고객은 연락 가능한 휴대폰 번호나 이메일을 등록해야 예약이 됨</dd></div>
         <div><dt>주의</dt><dd>늦게 도착해 홀 수가 줄어도 18홀 요금. 3인 +¥550, 2인 +¥3,300. 7일 전부터 취소료 1조 ¥8,000 (주말 ¥10,000)</dd></div>
       </dl>
     </article>
@@ -541,13 +516,13 @@ footer a{color:var(--ink-2)}
       <div class="course-head"><span class="rchip">A안 2R · 11/21 토 · 08:28</span><span class="rchip alt">B안 3R · 11/21 토</span></div>
       <h3>후쿠오카 국제 컨트리클럽</h3>
       <p class="jp">福岡国際カントリークラブ (PGM) · 무나카타시</p>
-      <p class="why">1969년에 개장한 36홀 코스로, 나나마타 코스에서 야쿠르트 레이디스를 20년간 열었습니다. 9월 28일 조회 기준으로 토요일 7:30~8:30 사이에 빈 티타임이 남은 곳은 사실상 여기뿐이었습니다. 한국어 예약 페이지가 있는 PGM 계열입니다.</p>
+      <p class="why">1969년에 개장한 36홀 코스로, 나나마타 코스에서 야쿠르트 레이디스를 20년간 열었습니다. 9월 28일 조회 기준으로 토요일 7:30~8:30 사이에 빈 티타임이 남은 곳은 사실상 여기뿐이었습니다. PGM 계열입니다.</p>
       <dl class="facts">
         <div><dt>거리</dt><dd>하카타에서 34km · 35~45분 (규슈도 와카미야 IC에서 5km)</dd></div>
         <div><dt>코스</dt><dd>36홀 (나카야마·나나마타) · 벤트 · 구릉</dd></div>
         <div><dt>평점</dt><dd>GORA 4.0 (리뷰 3,539건). 최근 정비 상태가 좋아졌다는 평</dd></div>
         <div><dt>요금 (토)</dt><dd>¥22,400. 락커·목욕 ¥440 별도</dd></div>
-        <div><dt>예약</dt><dd>GORA 또는 PGM 공식 사이트 (한국어 페이지 있음)</dd></div>
+        <div><dt>예약</dt><dd><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400040/">라쿠텐 GORA</a> 또는 PGM 공식 사이트</dd></div>
         <div><dt>주의</dt><dd>11월엔 스루가 없고 점심이 1시간을 넘길 수 있음. 연습장은 8/19부터 휴장. 주말 취소료는 14일 전부터 1조 ¥8,000</dd></div>
       </dl>
     </article>
@@ -562,7 +537,7 @@ footer a{color:var(--ink-2)}
         <div><dt>코스</dt><dd>27홀 · 벤트 · 구릉. 코스·그린 난도 모두 5점 만점에 4</dd></div>
         <div><dt>평점</dt><dd>GORA 4.1 (리뷰 2,594건)</dd></div>
         <div><dt>요금</dt><dd>토일공휴일 셀프 ¥22,000 · 캐디 ¥24,000 (A안). 평일 셀프 ¥14,000 · 캐디 ¥16,000 (B안). 공식 요금표 기준</dd></div>
-        <div><dt>예약</dt><dd>GORA 또는 공식 웹. 여행사·대리 예약 금지 (적발 시 플레이 거부 + 취소료 100%). 동반자 이름은 1주일 전까지 등록</dd></div>
+        <div><dt>예약</dt><dd><a href="https://aigc.jp/reservation/">공식 웹</a> 또는 <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400002/">GORA</a>. 여행사·대리 예약 금지 (적발 시 플레이 거부 + 취소료 100%). 동반자 이름은 1주일 전까지 등록</dd></div>
         <div><dt>주의</dt><dd>입국 당일 플레이 불가. 3일 전부터 취소료 100% × 인원. 11월엔 재킷을 입고 입장</dd></div>
       </dl>
     </article>
@@ -577,21 +552,11 @@ footer a{color:var(--ink-2)}
         <div><dt>평점</dt><dd>GORA 리뷰 725건 중 5점 42%, 4점 49%. 그린 관리 호평</dd></div>
         <div><dt>요금 (금)</dt><dd>셀프 ¥17,070 · 캐디 ¥21,050 (토·공휴일 셀프 ¥24,450)</dd></div>
         <div><dt>티오프</dt><dd>금요일 11:28~12:08 출발은 15분 휴식이라 12:08에 나가도 16:50 전후 종료. 9/28 기준 11:44·11:52·12:08이 비어 있었음</dd></div>
-        <div><dt>조건</dt><dd>한 조에 일본어 가능자 1명 이상 필수. 일요일 비지터 불가. 대리·단체명 예약 불가</dd></div>
+        <div><dt>조건</dt><dd><a href="https://cm-g.co.jp/the-classic/">공식 사이트</a>에서 예약. 한 조에 일본어 가능자 1명 이상 필수. 일요일 비지터 불가. 대리·단체명 예약 불가</dd></div>
         <div><dt>주의</dt><dd>재킷 입장 (6~9월 제외), 셔츠 인. 평일 취소료는 3일 전부터 1조 ¥5,000</dd></div>
       </dl>
     </article>
   </div>
-
-  <p class="backups"><b>예비 코스.</b> 1R: 후쿠오카 레이크사이드 CC (금요일 점심 포함 출발 11:15까지, 입국 당일 손님은 1시간 전 도착). 2R: JR 우치노 CC (한국인 선호도 높음, 7:25~8:00 출발은 스루, 직원은 일본어만 가능), 후쿠오카 레이크사이드 (토 11:15). 3R: 후쿠오카 레이크사이드 (일 08:08·08:38), 후쿠오카 국제 (일 07:39·07:53).</p>
-
-  <h3>이번 일정에서 뺀 명문 코스</h3>
-  <ul class="plain">
-    <li>고가 GC (일본오픈 개최 코스): 회원이나 게스트 카드로만 칠 수 있음</li>
-    <li>후쿠오카 CC 와지로 코스: 회원만 예약 가능</li>
-    <li>게야 GC (KBC 오거스타 개최지), 퀸즈힐 GC (2001 일본프로 개최): 일본 국적이 아니면 회원 동반 필요</li>
-    <li>후쿠오카 라이잔, 후쿠오카 센추리, 시마 시사이드: 외국인이나 일본어를 못 하는 손님은 회원 동반 조건</li>
-  </ul>
 
   <h3 id="golfopts">날짜별 가성비 선택지 (하루 3곳)</h3>
   <p class="sub">초록 테두리가 지금 일정에 넣은 코스입니다. 요금은 4인 1조 1인 기준이고 카트·세금을 포함하며 점심은 별도입니다. 시간과 요금은 9월 28일 조회 기준입니다.</p>
@@ -599,45 +564,45 @@ footer a{color:var(--ink-2)}
   <div class="optday">
     <h4>11/19 목 · B안 1일차 (도착일)</h4>
     <div class="optgrid">
-      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분. 목요일 10:50~11:22 출발이 비어 있었음</p></div>
-      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>가장 쌈. 입국 당일엔 1시간 전 도착 규정이라 아시아나 06:00편일 때만 현실적. 목요일 시간은 확인 필요</p></div>
-      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:28~12:08 출발</p><p>2020 일본여자오픈 코스를 평일가로. 전후반 사이 15분 휴식. 일본어 가능자 필요</p></div>
+      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분. 목요일 10:50~11:22 출발이 비어 있었음</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400033/">GORA 예약</a></p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>가장 쌈. 입국 당일엔 1시간 전 도착 규정이라 아시아나 06:00편일 때만 현실적. 목요일 시간은 확인 필요</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400044/">GORA 예약</a></p></div>
+      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:28~12:08 출발</p><p>2020 일본여자오픈 코스를 평일가로. 전후반 사이 15분 휴식. 일본어 가능자 필요</p><p class="lnk"><a href="https://cm-g.co.jp/the-classic/">공식 사이트</a></p></div>
     </div>
   </div>
 
   <div class="optday">
     <h4>11/20 금 · A안 1일차 (도착일)</h4>
     <div class="optgrid">
-      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분</p></div>
-      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>입국 당일엔 1시간 전 도착. 공항 약 32분. 16:30 전후 종료</p></div>
-      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:44 / 11:52 / 12:08</p><p>9/28에 비어 있던 시간. 일본어 가능자 필요, 16:50 전후 종료</p></div>
+      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400033/">GORA 예약</a></p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>입국 당일엔 1시간 전 도착. 공항 약 32분. 16:30 전후 종료</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400044/">GORA 예약</a></p></div>
+      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:44 / 11:52 / 12:08</p><p>9/28에 비어 있던 시간. 일본어 가능자 필요, 16:50 전후 종료</p><p class="lnk"><a href="https://cm-g.co.jp/the-classic/">공식 사이트</a></p></div>
     </div>
   </div>
 
   <div class="optday">
     <h4>11/20 금 · B안 2일차</h4>
     <div class="optgrid">
-      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥14,000 · 8시대 출발</p><p>명문 토너먼트 코스를 평일가로. 캐디는 ¥16,000</p></div>
-      <div class="opt"><b>후쿠오카 국제 CC</b><p class="price">¥11,400 · 점심 포함</p><p>금요일 가장 쌈. 11월은 스루 없음. 락커·목욕 ¥440 별도</p></div>
-      <div class="opt"><b>센트럴 후쿠오카 GC</b><p class="price">¥11,490 · 스루 07:00~07:22</p><p>11시 반쯤 끝나 오후가 넉넉함. 폰 해기 설계, 벤트 투그린. 대리 예약 불가</p></div>
+      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥14,000 · 8시대 출발</p><p>명문 토너먼트 코스를 평일가로. 캐디는 ¥16,000</p><p class="lnk"><a href="https://aigc.jp/reservation/">공식 예약</a> · <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400002/">GORA</a></p></div>
+      <div class="opt"><b>후쿠오카 국제 CC</b><p class="price">¥11,400 · 점심 포함</p><p>금요일 가장 쌈. 11월은 스루 없음. 락커·목욕 ¥440 별도</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400040/">GORA 예약</a></p></div>
+      <div class="opt"><b>센트럴 후쿠오카 GC</b><p class="price">¥11,490 · 스루 07:00~07:22</p><p>11시 반쯤 끝나 오후가 넉넉함. 폰 해기 설계, 벤트 투그린. 대리 예약 불가</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400028/">GORA 예약</a></p></div>
     </div>
   </div>
 
   <div class="optday">
     <h4>11/21 토 · A안 2일차 · B안 3일차</h4>
     <div class="optgrid">
-      <div class="opt cur"><b>후쿠오카 국제 CC <span class="curtag">지금 일정</span></b><p class="price">¥22,400 · 08:28</p><p>토요일 이른 시간이 남은 거의 유일한 곳. 한국어 예약 페이지</p></div>
-      <div class="opt"><b>JR 우치노 CC</b><p class="price">¥18,920 · 7:25~8:00 스루</p><p>한국인 평이 좋은 코스. 전화 예약(직원 일본어만), 입국 당일 불가, 문신 입장 불가. 토요일 잔여 확인 필요</p></div>
-      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 토요일</p><p>한국어 홈페이지. 온라인에 토요일 시간이 안 보여 전화 문의 필요</p></div>
+      <div class="opt cur"><b>후쿠오카 국제 CC <span class="curtag">지금 일정</span></b><p class="price">¥22,400 · 08:28</p><p>토요일 이른 시간이 남은 거의 유일한 곳</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400040/">GORA 예약</a></p></div>
+      <div class="opt"><b>JR 우치노 CC</b><p class="price">¥18,920 · 7:25~8:00 스루</p><p>한국인 평이 좋은 코스. 직원은 일본어만 가능, 입국 당일 불가, 문신 입장 불가. 토요일 잔여 확인 필요</p><p class="lnk"><a href="https://www.jruchino.cc/">공식 사이트</a> · 전화 0948-72-3223</p></div>
+      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 토요일</p><p>한국어 안내 페이지가 있음. 토요일 시간은 온라인 예약 화면이나 전화(+81-949-54-0595)로 확인</p><p class="lnk"><a href="https://www.valuegolf.co.jp/course_reserve/sungrwaka/online.html">온라인 예약</a> · <a href="https://trial-golf-resort-wakamiya-course.com/ko-index">한국어 안내</a></p></div>
     </div>
   </div>
 
   <div class="optday">
     <h4>11/22 일 · A안 3일차</h4>
     <div class="optgrid">
-      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥22,000 · 08:35~08:56</p><p>명문 라운드. 캐디는 ¥24,000</p></div>
-      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 스루 10:37~11:00</p><p>일요일 가장 쌈. 15시 반 전후 종료</p></div>
-      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥21,900 · 08:08 / 08:38</p><p>점심 포함. 14시 반 전후 종료</p></div>
+      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥22,000 · 08:35~08:56</p><p>명문 라운드. 캐디는 ¥24,000</p><p class="lnk"><a href="https://aigc.jp/reservation/">공식 예약</a> · <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400002/">GORA</a></p></div>
+      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 스루 10:37~11:00</p><p>일요일 가장 쌈. 15시 반 전후 종료</p><p class="lnk"><a href="https://www.valuegolf.co.jp/course_reserve/sungrwaka/online.html">온라인 예약</a> · <a href="https://trial-golf-resort-wakamiya-course.com/ko-index">한국어 안내</a></p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥21,900 · 08:08 / 08:38</p><p>점심 포함. 14시 반 전후 종료</p><p class="lnk"><a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400044/">GORA 예약</a></p></div>
     </div>
   </div>
 
@@ -700,7 +665,7 @@ footer a{color:var(--ink-2)}
     <li><time>14:40</time><div><span class="tag">이동</span><span class="what">하카타로 복귀 (15:25 전후 도착)</span></div></li>
     <li><time>15:30</time><div><span class="tag see">관광</span><span class="what">오후는 셋 중 하나를 고르세요</span>
       <ul class="plain">
-        <li><b>온천:</b> 돌아오는 길의 베이사이드 플레이스 <b>미나토 온천 나미하노유</b> (주말 ¥1,250, 10:00~23:00, 4시간 무료 주차). 호텔 대욕장으로 대신해도 됩니다. 사우나파라면 기온의 <b>웰비 후쿠오카</b> (주말 2시간 ¥2,500).</li>
+        <li><b>온천:</b> 돌아오는 길의 베이사이드 플레이스 <b>미나토 온천 나미하노유</b> (주말 ¥1,250, 10:00~23:00, 4시간 무료 주차). 사우나파라면 기온의 <b>웰비 후쿠오카</b> (주말 2시간 ¥2,500).</li>
         <li><b>쇼핑:</b> 텐진 ONE FUKUOKA BLDG. (2025년 개장, 약 130개 매장), 이와타야·다이마루·파르코, 하카타역 아뮤플라자·한큐. 실물 크기 건담이 있는 라라포트 후쿠오카도 차로 15분 안팎입니다.</li>
         <li><b>스모 관전:</b> 규슈 바쇼 14일째입니다. 마쿠우치 입장 의식이 15:40 전후, 본경기는 16:00~18:00입니다. 정가 티켓은 매진이라 공식 리세일(定価リセール)로만 구할 수 있고, 주말 정가는 의자석 ¥2,500~6,000입니다.</li>
       </ul>
@@ -830,131 +795,79 @@ footer a{color:var(--ink-2)}
 
 <!-- ===== TRANSPORT ===== -->
 <section id="transport">
-  <p class="kicker">Transport</p>
-  <h2>교통비 비교: 렌터카가 택시의 절반 이하</h2>
-  <p class="sub">4명, 골프백 4개, 캐리어 4개 기준입니다. 3라운드 왕복, 첫날 공항→골프장, 마지막 날 호텔→공항까지 합친 금액이고, 환율은 2026년 9월 평균인 100엔 = 870원으로 계산했습니다.</p>
-
-  <div class="costlist" role="list" aria-label="이동 방식별 비용 비교">
-    <div class="cost-scale" aria-hidden="true">
-      <p class="cost-scale-title">1인 금액 (엔)</p>
-      <div class="scale"><span style="left:0">0</span><span style="left:25%">2만</span><span style="left:50%">4만</span><span style="left:75%">6만</span><span style="left:100%">8만</span></div>
-    </div>
-    <div class="opt-row" role="listitem">
-      <div class="opt-top">
-        <div class="opt-name"><b>A. 렌터카 (노아·복시급)</b><span class="pick">추천</span><span class="opt-desc">차량, 보험, ETC, 기름, 통행료, 호텔 주차 3박</span></div>
-        <div class="opt-num"><span class="pp">1인 ¥14,600~21,400</span><span class="tot">약 13만~19만 원 · 4인 ¥58,500~85,400</span></div>
-      </div>
-      <div class="range rec" data-lo="14600" data-hi="21400" tabindex="0" aria-label="A 렌터카 내역" data-tip-value="1인 ¥14,600~21,400" data-tip-label="4인 합계: 차량 ¥40,000~60,500 + 보험 ¥2,200~6,600 + ETC ¥330 + 기름 약 ¥4,000 + 통행료 ¥6,000~8,000 + 주차 ¥6,000"></div>
-      <p class="range-note print-only">4인 합계: 차량 ¥40,000~60,500 + 보험 ¥2,200~6,600 + ETC ¥330 + 기름 약 ¥4,000 + 통행료 ¥6,000~8,000 + 주차 ¥6,000</p>
-    </div>
-    <div class="opt-row na" role="listitem">
-      <div class="opt-top">
-        <div class="opt-name"><b>B. 클럽버스 + 전철 + 택시</b><span class="opt-desc">추천 코스 3곳 모두 클럽버스가 없습니다 (GORA 안내). 버스가 있는 코스로 바꾸면 선택지가 크게 줄어듭니다.</span></div>
-        <div class="opt-num"><span class="pp">해당 없음</span></div>
-      </div>
-    </div>
-    <div class="opt-row" role="listitem">
-      <div class="opt-top">
-        <div class="opt-name"><b>C. 택시 (MK 골프 정액 점보)</b><span class="opt-desc">하루 ¥57,320 × 3일 (10시간 이내 왕복), 통행료, 마지막 날 공항</span></div>
-        <div class="opt-num"><span class="pp">1인 약 ¥45,900</span><span class="tot">약 40만 원 · 4인 약 ¥183,000</span></div>
-      </div>
-      <div class="range" data-lo="45900" data-hi="45900" tabindex="0" aria-label="C 택시 내역" data-tip-value="1인 약 ¥45,900" data-tip-label="4인 합계: ¥57,320 × 3일 + 통행료 약 ¥7,000 + 4일차 공항 점보택시 약 ¥4,500"></div>
-      <p class="range-note print-only">4인 합계: ¥57,320 × 3일 + 통행료 약 ¥7,000 + 4일차 공항 점보택시 약 ¥4,500</p>
-    </div>
-    <div class="opt-row" role="listitem">
-      <div class="opt-top">
-        <div class="opt-name"><b>D. 기사 포함 전세 밴 (MK 점보 시간제)</b><span class="opt-desc">8시간 ¥73,760 + 30분당 ¥4,110. 한국어 기사 지정 가능</span></div>
-        <div class="opt-num"><span class="pp">1인 ¥64,000~78,000</span><span class="tot">약 56만~68만 원 · 4인 ¥257,000~312,000</span></div>
-      </div>
-      <div class="range" data-lo="64000" data-hi="78000" tabindex="0" aria-label="D 전세 밴 내역" data-tip-value="1인 ¥64,000~78,000" data-tip-label="4인 합계: 하루 9~10시간 ¥82,000~90,200 × 3일 + 통행료·공항 이동 + 외국어 기사 요금(붙는 경우)"></div>
-      <p class="range-note print-only">4인 합계: 하루 9~10시간 ¥82,000~90,200 × 3일 + 통행료·공항 이동 + 외국어 기사 요금(붙는 경우)</p>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">막대의 진한 부분은 최저 금액, 옅은 부분은 최고 금액까지의 범위입니다.<span class="screen-only"> 막대에 마우스를 올리거나 탭하면 내역이 나옵니다.</span> B안도 대여 기간이 같아서 교통비는 거의 같습니다.</p>
-
-  <h3>추천: A. 렌터카 + 운전 당번</h3>
-  <ul class="plain">
-    <li>가장 싸고, 첫날 공항에서 골프백을 싣고 바로 골프장으로 갈 수 있습니다. 2일차 온천이나 4일차 다자이후처럼 동선도 자유롭습니다.</li>
-    <li><b>차종:</b> 도요타 노아·복시급(폭 1.73m)입니다. 3열을 접으면 4명과 골프백 4개가 들어가는데, 캐리어까지 실으면 꽉 차니 캐리어는 기내용 크기로 맞추세요. 알파드(폭 1.85m)는 호텔 주차장 폭 제한(1.80~1.83m)에 걸리는 곳이 많고, 10인승 하이에이스는 국제운전면허 D종이 필요한 데다 호텔 주차가 거의 안 됩니다.</li>
-    <li><b>가격:</b> 도요타 정가 기준 노아급을 금요일 오전부터 월요일 낮까지(72~76시간) 빌리면 ¥51,700~60,500이고, 면책·NOC 보상이 약 ¥6,600입니다. 자란이나 토쿠(tocoo) 같은 비교 사이트에서는 하루 ¥9,100~16,400부터 나오지만 연휴라 오를 수 있습니다.</li>
-    <li><b>운전 당번:</b> 일본 음주운전 기준은 호흡 0.15mg/L이고, 차를 빌려준 사람, 술을 준 사람, 알고 탄 동승자도 처벌받습니다. 운전자는 한 모금도 마시지 않는 게 원칙입니다. 라운드마다 당번을 바꾸세요.</li>
-    <li><b>모두 마시고 싶은 날:</b> 그날만 MK 골프 정액 점보(¥57,320, 1인 약 ¥14,300)를 부르거나, 골프장 프런트에 대리운전(代行)을 부탁합니다. 대행 요금은 30km에 ¥8,000~15,000 정도로 알려져 있는데 확인은 못 했습니다. 렌터카 약관이 대행을 허용하는지도 확인하세요.</li>
-    <li><b>기름과 통행료:</b> 레귤러 휘발유는 L당 ¥169 (9/14 조사)입니다. 후쿠오카 도시고속은 ¥630 균일(ETC ¥560~630)이고, 하카타→와카미야 IC가 편도 약 ¥1,420입니다. 전체 통행료는 ¥6,000~8,000으로 잡았습니다.</li>
-  </ul>
-
-  <h3>렌터카 업체 3곳: 공항 동선이 짧은 순</h3>
-  <p class="sub">세 곳 모두 국제선 터미널 1층에 카운터가 있어, 입국장에서 나와 바로 수속합니다. 대여 기간이 같아서 A안과 B안 요금은 같습니다(첫날 오전 인수, 마지막 날 낮 반납, 약 72~75시간).</p>
+  <p class="kicker">Rental car</p>
+  <h2>렌터카: 공항에서 바로 빌리는 3곳</h2>
+  <p class="sub">세 곳 모두 국제선 터미널 1층에 카운터가 있어서 입국장에서 나와 바로 수속합니다. 노아·복시급 미니밴 1대면 4명과 골프백 4개가 들어갑니다. 첫날 오전에 빌려 마지막 날 낮에 반납하는 약 72~75시간이라, A안과 B안 요금이 같습니다.</p>
   <div class="tbl-wrap">
     <table class="tiers">
-      <caption class="sr-only">렌터카 업체 세 곳의 공항 이동, 차종, 예상 요금 비교</caption>
-      <thead><tr><th scope="col">업체</th><th scope="col">공항에서</th><th scope="col">차종</th><th scope="col" class="num">3박 4일 예상<span class="p">1대 · 보험 포함</span></th><th scope="col">메모</th></tr></thead>
+      <caption class="sr-only">렌터카 업체 세 곳의 공항 이동, 차종, 예상 요금, 예약 링크</caption>
+      <thead><tr><th scope="col">업체</th><th scope="col">공항에서</th><th scope="col">차종</th><th scope="col" class="num">3박 4일 예상<span class="p">1대 · 보험 포함</span></th><th scope="col">예약</th></tr></thead>
       <tbody>
-        <tr><td><b>도요타 렌터카</b><span class="p">후쿠오카 INTERNATIONAL점</span></td><td>1층 렌터카 공동 안내소 → 무료 셔틀 약 3분</td><td>노아·복시 (W2)</td><td class="num">약 ¥58,000~65,000<span class="p">1인 약 ¥15,000~16,000</span></td><td>정가 기준. 8:00~20:00 영업. 차량 상태와 영업소 규모가 안정적</td></tr>
-        <tr><td><b>스카이 렌터카</b></td><td>1층 카운터 → 무료 셔틀 약 5분</td><td>노아·세레나·스텝왜건</td><td class="num">약 ¥27,000~36,000<span class="p">1인 약 ¥7,000~9,000</span></td><td>비교 사이트 기준 1일 ¥9,100부터(보험 포함). 가장 쌈. 연휴라 오를 수 있음</td></tr>
-        <tr><td><b>버젯 렌터카</b></td><td>1층 카운터 → 도보 약 5분</td><td>노아·세레나·델리카</td><td class="num">약 ¥40,000~53,000<span class="p">1인 약 ¥10,000~13,000</span></td><td>자란 기준 24시간 ¥11,000부터 + 면책 약 ¥2,200/일</td></tr>
+        <tr><td><b>도요타 렌터카</b><span class="p">후쿠오카 INTERNATIONAL점 · 8:00~20:00</span></td><td>1층 렌터카 공동 안내소 → 무료 셔틀 약 3분</td><td>노아·복시</td><td class="num">약 ¥58,000~65,000<span class="p">1인 약 ¥15,000~16,000</span></td><td><a href="https://www2.tocoo.jp/kr/office/detail?office_id=3581">토쿠 (한국어)</a><span class="p"><a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&amp;eCode=068">영업소 안내</a></span></td></tr>
+        <tr><td><b>스카이 렌터카</b><span class="p">가장 쌈</span></td><td>1층 카운터 → 무료 셔틀 약 5분</td><td>노아·세레나·스텝왜건</td><td class="num">약 ¥27,000~36,000<span class="p">1인 약 ¥7,000~9,000</span></td><td><a href="https://jcation.com/rentacar/prefecture-fukuoka/airport-fukuoka/cartype-minivan/">jcation</a></td></tr>
+        <tr><td><b>버젯 렌터카</b></td><td>1층 카운터 → 도보 약 5분</td><td>노아·세레나·델리카</td><td class="num">약 ¥40,000~53,000<span class="p">1인 약 ¥10,000~13,000</span></td><td><a href="https://www.jalan.net/rentacar/search/CSIZ_005/400000/LRG_400100/plan/">자란 렌터카</a></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small" style="margin-top:8px">도요타는 공식 요금표, 스카이와 버젯은 9월 말 비교 사이트(jcation, 자란) 최저가 기준이라 실제 날짜 요금은 예약 화면에서 확인하세요. 타임즈는 영업소가 1.5km 떨어져 셔틀이 약 15분 걸려서 뺐습니다. 기름값·통행료·주차비는 위 교통비 비교에 들어 있습니다.</p>
+  <p class="small" style="margin-top:8px">도요타는 공식 요금표, 스카이와 버젯은 9월 말 비교 사이트 최저가 기준입니다. 연휴라 실제 요금은 예약 화면에서 확인하세요.</p>
 
-  <h3>나머지 방식의 함정</h3>
+  <h3>차 말고 드는 돈 (4인 합계)</h3>
   <ul class="plain">
-    <li><b>셔틀:</b> 셔틀이 있는 코스로 짜면 코스 선택지가 크게 줄고, 골프백을 들고 전철을 타야 합니다. 야마토 골프 택배(규슈 내 1개 ¥3,020)는 플레이 2일 전까지 보내야 해서 연속 라운드에는 맞지 않습니다.</li>
-    <li><b>택시:</b> 일반 세단에는 골프백이 2~3개만 들어가서 2대가 필요합니다. 미터 요금은 하카타에서 40km 코스까지 세단 약 ¥13,700, 점보 약 ¥25,900 (편도, 통행료 별도)이고, 돌아올 때 픽업이 보장되지 않습니다. MK 골프 정액은 전날 취소하면 50%를 냅니다.</li>
-    <li><b>전세 밴:</b> 가장 편하지만 가장 비쌉니다. 녹색 번호판 영업 차량만 이용하세요. 흰색 번호판 자가용으로 돈 받고 태우는 영업은 불법입니다.</li>
+    <li>기름 약 ¥4,000 (레귤러 L당 ¥169, 약 300km)</li>
+    <li>통행료 약 ¥6,000~8,000 (후쿠오카 도시고속 ¥630 균일, 하카타→와카미야 IC 편도 약 ¥1,420). ETC 카드 대여 ¥330</li>
+    <li>호텔 주차 3박 ¥3,300~6,000</li>
+    <li><b>차량까지 합친 총액은 약 ¥41,000~83,000, 1인 약 ¥10,000~21,000입니다.</b></li>
+  </ul>
+
+  <h3>빌릴 때 알아둘 것</h3>
+  <ul class="plain">
+    <li><b>차종:</b> 노아·복시급(폭 1.73m)은 3열을 접으면 4명과 골프백 4개가 들어갑니다. 캐리어는 기내용 크기로 맞추세요. 알파드(폭 1.85m)는 호텔 주차장 폭 제한에 걸리는 곳이 많고, 10인승 하이에이스는 국제운전면허 D종이 필요합니다.</li>
+    <li><b>서류:</b> 운전할 사람 전원이 국제운전면허증(종이), 한국 면허증, 여권을 챙기세요.</li>
+    <li><b>운전 당번:</b> 일본 음주운전 기준은 호흡 0.15mg/L이고, 동승자와 술을 준 사람도 처벌받습니다. 운전자는 한 모금도 마시지 않는 게 원칙이니 라운드마다 당번을 바꾸세요. 모두 마시고 싶은 날은 골프장 프런트에 대리운전(代行)을 부탁할 수 있습니다. 요금은 30km에 ¥8,000~15,000 정도로 알려져 있는데 확인하지는 못했습니다.</li>
+    <li><b>반납:</b> 공항 근처 셀프 주유소에서 가득 채우고, 비행기 출발 3시간 전에 반납하세요.</li>
   </ul>
 </section>
 
 <!-- ===== STAY ===== -->
 <section id="stay">
-  <p class="kicker">Stay · 3 nights</p>
-  <h2>숙소: 새벽 출차 되는 주차장과 대욕장</h2>
-  <p class="sub">골프 여행 숙소에서는 세 가지를 봅니다. 새벽 6시대에 차를 뺄 수 있는지, 미니밴이 들어가는 크기인지, 라운드 뒤 몸을 풀 대욕장이 있는지입니다. 하카타역~나카스~기온 사이가 고속도로 타기도 쉽고 저녁 동선도 편합니다.</p>
+  <p class="kicker">Stay · 3 nights · 4인</p>
+  <h2>숙소: 하카타·텐진·나카스 도심, 미니밴 주차</h2>
+  <p class="sub">매일 밤 시내에서 놀 수 있게 하카타역·기온·나카스·텐진 도보권 숙소만 골랐습니다. 요금은 4인 3박 합계이고 9월 28일에 조회했습니다.</p>
 
-  <div class="notice" role="note">
-    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 19.2 18H.8Z" fill="#fab219"/><path d="M10 7.6v5" stroke="#1a1a19" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="15.1" r="1.15" fill="#1a1a19"/></svg>
-    <div><p><span class="lbl">주의: 3박 연속으로 남은 호텔이 적습니다.</span>9월 28일 라쿠텐에서 토요일을 포함한 3박으로 조회하면 크룸 하카타, 크룸 기온, 도미인 PREMIUM, 컴포트 하카타, 닛코, 미야코, 워싱턴 호텔이 모두 만실이었습니다. 트윈은 대부분 매진이고 더블이나 비싼 객실만 남아 있습니다. 공식 사이트, 자란, 아고다도 함께 확인하세요.</p></div>
-  </div>
-
-  <h3>호텔 4곳: 3박 연속 예약 가능 · 미니밴 주차 가능</h3>
+  <h3>호텔 4곳 (2실)</h3>
   <div class="tbl-wrap">
     <table class="tiers">
-      <caption class="sr-only">가격대별 호텔 네 곳의 A안과 B안 3박 요금, 주차, 특징</caption>
-      <thead><tr><th scope="col">가격대 · 호텔</th><th scope="col" class="num">A안 3박<span class="p">11/20~23 · 1실</span></th><th scope="col" class="num">B안 3박<span class="p">11/19~22 · 1실</span></th><th scope="col">주차</th><th scope="col">특징</th></tr></thead>
+      <caption class="sr-only">도심 호텔 네 곳의 4인 3박 요금, 주차 조건, 예약 링크</caption>
+      <thead><tr><th scope="col">호텔 · 객실</th><th scope="col" class="num">A안 4인 3박<span class="p">11/20~23</span></th><th scope="col" class="num">B안 4인 3박<span class="p">11/19~22</span></th><th scope="col">주차</th><th scope="col">예약 (라쿠텐)</th></tr></thead>
       <tbody>
-        <tr><td><span class="tier">저가</span><b>아파 호텔 &amp; 리조트 하카타역 동쪽</b><span class="p">스탠다드 더블 (트윈 매진) · 조식 제외</span></td><td class="num">¥86,734<span class="p">1인 ¥43,367</span></td><td class="num">¥77,290<span class="p">1인 ¥38,645</span></td><td>11대, ¥1,500/박, 선착순 (예약 불가). 크기 제한 표기 없음</td><td>최상층 대욕장·노천탕. 하카타역 도보 2~4분. 더블 침대 하나를 둘이 씀</td></tr>
-        <tr><td><span class="tier">중가</span><b>칸데오 호텔 후쿠오카 텐진</b><span class="p">이그제큐티브 소파 더블 15㎡ · 조식 제외</span></td><td class="num">¥124,700<span class="p">1인 ¥62,350</span></td><td class="num">¥115,700<span class="p">1인 ¥57,850</span></td><td>야외 7대, ¥2,000/박, 전화 예약</td><td>옥상 노천탕과 90℃ 사우나. 텐진 중심</td></tr>
-        <tr><td><span class="tier">중상</span><b>더 루이간스 스파 &amp; 리조트</b><span class="p">4인 1실 · 시사이드 스위트 49㎡ (글램핑 구역) · 조식 제외</span></td><td class="num">¥315,560<span class="p">1인 ¥78,890</span></td><td class="num">¥266,800<span class="p">1인 ¥66,700 · 1실 남음</span></td><td>무료</td><td>바닷가 리조트(히가시구 아일랜드시티). 하카타까지 차로 20~25분. 넷이 한 방</td></tr>
-        <tr><td><span class="tier">고가</span><b>힐튼 후쿠오카 시호크</b><span class="p">A안 이그제큐티브 트윈 조식 포함 · B안 더블 조식 제외 (트윈 매진)</span></td><td class="num">¥218,414<span class="p">1인 ¥109,207</span></td><td class="num">¥142,550<span class="p">1인 ¥71,275</span></td><td>800대, ¥2,000/박, 예약 불필요</td><td>모모치 해변, 공항까지 약 20분. 나카스는 택시. 11/23 옆 페이페이돔 특별 경기로 혼잡</td></tr>
+        <tr><td><b>아파 호텔 &amp; 리조트 하카타역 동쪽</b><span class="p">더블 10㎡ × 2실 · 조식 제외 · 하카타역 도보 2~4분</span></td><td class="num">¥173,468<span class="p">1인 ¥43,367</span></td><td class="num">¥154,580<span class="p">1인 ¥38,645</span></td><td>11대, ¥1,500/박, 선착순</td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182017?f_no=182017&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=20&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=23&amp;f_heya_su=2&amp;f_otona_su=2">A안</a> · <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182017?f_no=182017&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=19&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=22&amp;f_heya_su=2&amp;f_otona_su=2">B안</a></td></tr>
+        <tr><td><b>아파 호텔 하카타역 지쿠시구치</b><span class="p">더블 10㎡ × 2실 · 조식 제외 · 하카타역 도보 2~4분</span></td><td class="num">¥178,560<span class="p">1인 ¥44,640</span></td><td class="num">¥158,400<span class="p">1인 ¥39,600</span></td><td>16대, ¥1,800/박, 선착순</td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182019?f_no=182019&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=20&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=23&amp;f_heya_su=2&amp;f_otona_su=2">A안</a> · <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/182019?f_no=182019&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=19&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=22&amp;f_heya_su=2&amp;f_otona_su=2">B안</a></td></tr>
+        <tr><td><b>호텔 액티브! 하카타</b><span class="p">더블 14㎡ × 2실 · 조식 포함 · 하카타역 도보 4분</span></td><td class="num">¥220,000<span class="p">1인 ¥55,000</span></td><td class="num">¥200,000<span class="p">1인 ¥50,000</span></td><td>옆 제휴 주차장, 높이 제한 없음, ¥1,100/박 (15시~다음 날 10시), 선착순</td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/108259?f_no=108259&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=20&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=23&amp;f_heya_su=2&amp;f_otona_su=2">A안</a> · <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/108259?f_no=108259&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=19&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=22&amp;f_heya_su=2&amp;f_otona_su=2">B안</a></td></tr>
+        <tr><td><b>칸데오 호텔 후쿠오카 텐진</b><span class="p">이그제큐티브 소파 더블 15㎡ × 2실 · 조식 제외 · 텐진 중심</span></td><td class="num">¥249,400<span class="p">1인 ¥62,350 · 2실 남음</span></td><td class="num">¥231,400<span class="p">1인 ¥57,850 · 3실 남음</span></td><td>야외 7대, ¥2,000/박, 전화 예약</td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147612?f_no=147612&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=20&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=23&amp;f_heya_su=2&amp;f_otona_su=2">A안</a> · <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147612?f_no=147612&amp;f_flg=PLAN&amp;f_nen1=2026&amp;f_tuki1=11&amp;f_hi1=19&amp;f_nen2=2026&amp;f_tuki2=11&amp;f_hi2=22&amp;f_heya_su=2&amp;f_otona_su=2">B안</a></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small" style="margin-top:8px">9월 28일 라쿠텐 트래블 3박 연속 조회 요금이고, 1인 금액은 2인 1실(루이간스는 4인 1실) 기준입니다. 호텔 주차장은 크기 제한이 따로 적혀 있지 않은 곳이라도 예약할 때 "노아급 미니밴"이라고 알려 두세요.</p>
-  <ul class="plain">
-    <li><b>더 로열파크 캔버스 후쿠오카 나카스:</b> 제휴 주차장이 23:00~7:00에 입출차 불가라 새벽 출발이 안 됩니다.</li>
-    <li><b>미쓰이 가든 호텔 후쿠오카 나카스:</b> 주차 입고가 8:00~22:00이고 미니밴 가능 칸이 2개뿐입니다.</li>
-    <li><b>미야코 호텔 하카타:</b> 타워 주차장은 7:00~23:00만 운영합니다. 24시간 제휴 주차장(¥1,500)을 쓰면 가능합니다.</li>
-    <li><b>도큐스테이 하카타, 호텔 포르차 하카타구치:</b> 주차장이 없습니다. <b>도미인 하카타 기온</b>은 자체 주차장 높이가 1.55m라 미니밴이 못 들어갑니다.</li>
+  <ul class="plain" style="margin-top:10px">
+    <li>트윈은 네 곳 모두 매진이라 더블 2실 기준입니다. 한 침대가 불편하면 1인 1실로 4실을 잡는 방법도 있습니다.</li>
+    <li>선착순 주차는 저녁 늦게 들어오면 자리가 없을 수 있습니다. 라운드 후 호텔에 먼저 차를 세우고 나가세요. 자리가 없으면 근처 NPC24H 요도바시 하카타(1,125대, 주말 24시간 약 ¥2,000)를 쓰면 됩니다.</li>
+    <li>크룸, 도미인, 컴포트, 닛코, 미야코, 워싱턴 호텔은 9월 28일 조회 때 3박 연속 만실이었습니다. 다이와 로이넷 기온은 객실은 있지만 주차장 높이가 1.55m라 미니밴이 못 들어갑니다.</li>
   </ul>
 
-  <h3>에어비앤비 4곳: 무료 주차 포함 · 4인 숙소 전체</h3>
+  <h3>에어비앤비 2곳 (도심 + 전용 주차)</h3>
   <div class="tbl-wrap">
     <table class="tiers">
-      <caption class="sr-only">가격대별 에어비앤비 네 곳의 A안과 B안 총액과 주차 조건</caption>
-      <thead><tr><th scope="col">가격대 · 숙소</th><th scope="col" class="num">A안 총액<span class="p">4인 3박</span></th><th scope="col" class="num">B안 총액<span class="p">4인 3박</span></th><th scope="col">주차</th></tr></thead>
+      <caption class="sr-only">도심 에어비앤비 두 곳의 4인 3박 요금, 주차 조건, 예약 링크</caption>
+      <thead><tr><th scope="col">숙소</th><th scope="col" class="num">A안 4인 3박</th><th scope="col" class="num">B안 4인 3박</th><th scope="col">주차</th><th scope="col">예약</th></tr></thead>
       <tbody>
-        <tr><td><span class="tier">저가</span><b><a href="https://www.airbnb.co.kr/rooms/1222851128425026738">P205 아파트</a></b><span class="p">미나미구, 이지리역 도보 5분 · 방 2, 침대 4, 욕실 1 · 최대 4명 · 평점 4.88</span></td><td class="num">₩517,684<span class="p">1인 약 12.9만</span></td><td class="num">₩455,932<span class="p">1인 약 11.4만</span></td><td>무료 1대, 사전 예약. 호스트가 거리와 좁은 진입로를 미리 언급해 미니밴 확인 필수</td></tr>
-        <tr><td><span class="tier">중저가</span><b><a href="https://www.airbnb.co.kr/rooms/1054627450692652760">2LDK 아파트</a></b><span class="p">오노조시, 가스가바루역 도보 6분, 하카타까지 17분 · 방 2, 침대 5, 욕실 1.5 · 평점 4.7</span></td><td class="num">검색 결과 없음</td><td class="num">₩740,807<span class="p">1인 약 18.5만</span></td><td>지정 1대 무료, 위치는 사전 안내</td></tr>
-        <tr><td><span class="tier">중가</span><b><a href="https://www.airbnb.co.kr/rooms/1602740234579924741">공항 근처 단독주택</a></b><span class="p">공항까지 차로 11분 · 방 3, 침대 5, 욕실 1.5 · 평점 4.65</span></td><td class="num">검색 결과 없음</td><td class="num">₩991,872<span class="p">1인 약 24.8만</span></td><td>무료 3대. 미니밴이 들어갈 가능성이 가장 높고 공항 동선이 가장 짧음</td></tr>
-        <tr><td><span class="tier">고가</span><b><a href="https://www.airbnb.co.kr/rooms/1382454627615944695">2025년 신축 단독주택</a></b><span class="p">하카타구, 요시즈카역 도보 5분 · 방 2, 침대 5, 욕실 1 · 평점 4.79</span></td><td class="num">₩1,602,154<span class="p">1인 약 40.1만</span></td><td class="num">₩1,335,129<span class="p">1인 약 33.4만</span></td><td>건물 앞 1대</td></tr>
+        <tr><td><b>2025년 신축 단독주택</b><span class="p">하카타구, 요시즈카역 도보 5분 (하카타역까지 JR 1정거장) · 방 2, 침대 5, 욕실 1 · 평점 4.79</span></td><td class="num">₩1,602,154<span class="p">1인 약 40.1만</span></td><td class="num">₩1,335,129<span class="p">1인 약 33.4만</span></td><td>건물 앞 야외 1대, 무료</td><td><a href="https://www.airbnb.co.kr/rooms/1382454627615944695?check_in=2026-11-20&amp;check_out=2026-11-23&amp;adults=4">A안</a> · <a href="https://www.airbnb.co.kr/rooms/1382454627615944695?check_in=2026-11-19&amp;check_out=2026-11-22&amp;adults=4">B안</a></td></tr>
+        <tr><td><b>카모메 빌라</b><span class="p">나카스 인근 · 방 1 (세미더블 3) + 소파베드 2, 욕실 1.5 · 평점 4.97</span></td><td class="num">₩1,822,021<span class="p">1인 약 45.6만</span></td><td class="num">₩1,616,549<span class="p">1인 약 40.4만</span></td><td>건물 안 1대, 무료. 높이 제한 확인 필요</td><td><a href="https://www.airbnb.co.kr/rooms/1451823896552676238?check_in=2026-11-20&amp;check_out=2026-11-23&amp;adults=4">A안</a> · <a href="https://www.airbnb.co.kr/rooms/1451823896552676238?check_in=2026-11-19&amp;check_out=2026-11-22&amp;adults=4">B안</a></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small" style="margin-top:8px">9월 28일 에어비앤비 검색(4인, 무료 주차 필터) 총액입니다. "검색 결과 없음"은 그 날짜 검색에 나오지 않은 것이라 이미 예약됐을 수 있습니다.</p>
-  <ul class="plain">
-    <li><b>미니밴 확인:</b> 네 곳 모두 숙소 페이지에 차 크기 제한이 적혀 있지 않습니다. 예약 전에 호스트에게 이렇게 보내세요: "トヨタ・ノア（全長4.7m・幅1.73m・高さ1.9m）で伺います。駐車できますか？ / We'll come in a Toyota Noah minivan (L 4.7m, W 1.73m, H 1.9m). Will it fit in your parking space?"</li>
-    <li><b>합법 숙소인지:</b> 일본 민박은 신고번호(届出番号)가 있어야 합법입니다. 숙소 페이지에서 번호를 확인하세요.</li>
-    <li><b>목욕:</b> 대욕장이 없으니 2일차 온천 일정과 묶으세요. 쓰레기 분리와 소음 규칙이 엄격하고, 숙박세(1인 1박 ¥200~500)가 따로 붙을 수 있습니다.</li>
+  <ul class="plain" style="margin-top:10px">
+    <li>도심 에어비앤비 중 숙소 전용 주차가 확인된 곳은 이 두 곳뿐이었습니다. 캐널시티 옆 에스파즈 하카타처럼 근처 유료 주차장을 쓰라는 곳은 뺐습니다.</li>
+    <li><b>미니밴 확인:</b> 두 곳 모두 차 크기 제한이 적혀 있지 않습니다. 예약 전에 호스트에게 이렇게 보내세요: "トヨタ・ノア（全長4.7m・幅1.73m・高さ1.9m）で伺います。駐車できますか？ / We'll come in a Toyota Noah minivan (L 4.7m, W 1.73m, H 1.9m). Will it fit in your parking space?"</li>
+    <li>일본 민박은 신고번호(届出番号)가 있어야 합법이니 숙소 페이지에서 확인하세요. 숙박세(1인 1박 ¥200~500)가 따로 붙을 수 있습니다.</li>
   </ul>
 </section>
 
@@ -993,7 +906,7 @@ footer a{color:var(--ink-2)}
     <li><b>동반자 이름 등록:</b> 아소 이이즈카는 플레이 1주일 전까지 4명 이름을 등록해야 합니다.</li>
     <li><b>주말은 4인 1조가 기본입니다.</b> 2인은 거절되거나 1인당 ¥1,000~3,300, 3인은 ¥550~1,100이 더 붙습니다.</li>
     <li><b>취소료가 일찍 붙습니다.</b> 후쿠오카 국제는 14일 전부터 1조 ¥8,000(주말), 치쿠시가오카는 7일 전부터 ¥8,000~10,000, 아소 이이즈카는 3일 전부터 100% × 인원입니다. 비 예보 때문에 취소해도 부과되고, 골프장이 휴장할 때만 면제됩니다. 3일 이내 취소는 GORA가 아니라 골프장에 전화해야 합니다.</li>
-    <li><b>GORA 가입:</b> 라쿠텐 ID가 필요합니다. 한국 휴대폰 번호와 이메일을 정확히 넣으세요. 치쿠시가오카처럼 연락처가 없으면 해외 예약을 받지 않는 곳이 있습니다. PGM 계열(후쿠오카 국제)은 한국어 예약 페이지가 있습니다.</li>
+    <li><b>GORA 가입:</b> 라쿠텐 ID가 필요합니다. 한국 휴대폰 번호와 이메일을 정확히 넣으세요. 치쿠시가오카처럼 연락처가 없으면 해외 예약을 받지 않는 곳이 있습니다. PGM 계열(후쿠오카 국제, 레이크사이드) 공식 예약 사이트는 한국어 화면을 고를 수 있습니다.</li>
   </ul>
 
   <h3>요금에 포함되는 것과 아닌 것</h3>
@@ -1054,7 +967,7 @@ footer a{color:var(--ink-2)}
   <h3>지금 예약할 것</h3>
   <ul class="checks">
     <li><label><input type="checkbox" id="c-golf1"><span>치쿠시가오카 (또는 더 클래식) 스루<small>A안 금 · B안 목 · GORA 연락처 등록 필수</small></span></label></li>
-    <li><label><input type="checkbox" id="c-golf2"><span>후쿠오카 국제 토 08:28<small>A안·B안 모두 토요일 · PGM 한국어 페이지 또는 GORA</small></span></label></li>
+    <li><label><input type="checkbox" id="c-golf2"><span>후쿠오카 국제 토 08:28<small>A안·B안 모두 토요일 · GORA 또는 PGM 공식 사이트</small></span></label></li>
     <li><label><input type="checkbox" id="c-golf3"><span>아소 이이즈카 (명문)<small>A안 일 08:35~ · B안 금 평일 · 본인 명의, 1주일 전 동반자 등록</small></span></label></li>
     <li><label><input type="checkbox" id="c-car"><span>렌터카 노아·복시급 + ETC 카드<small>공항 국제선 인수 · 월요일 반납</small></span></label></li>
     <li><label><input type="checkbox" id="c-hotel"><span>호텔 3박 + 주차 예약<small>미니밴 크기 제한과 새벽 출차 확인</small></span></label></li>
@@ -1089,16 +1002,16 @@ footer a{color:var(--ink-2)}
       <tbody>
         <tr><td>골프 3라운드<span class="p">A: ¥15,000 + ¥22,400 + ¥22,000 · B: ¥15,000 + ¥14,000 + ¥22,400</span></td><td class="num">¥59,400</td><td class="num">¥51,400</td></tr>
         <tr><td>골프장 점심 · 음료 · 락커</td><td class="num">¥5,000~7,000</td><td class="num">¥5,000~7,000</td></tr>
-        <tr><td>교통 (렌터카 1/4)<span class="p">대여 기간이 같음</span></td><td class="num">¥14,600~21,400</td><td class="num">¥14,600~21,400</td></tr>
-        <tr><td>숙소 3박 (호텔 2인 1실)<span class="p">아파 하카타역 동쪽 ~ 칸데오 텐진, 9/28 3박 요금</span></td><td class="num">¥43,000~62,500</td><td class="num">¥38,500~58,000</td></tr>
+        <tr><td>렌터카 (4인 나눔)<span class="p">차량, 기름, 통행료, 호텔 주차</span></td><td class="num">¥10,200~20,800</td><td class="num">¥10,200~20,800</td></tr>
+        <tr><td>숙소 3박 (호텔, 4인 2실)<span class="p">도심 호텔 4곳: 아파 하카타역 동쪽 ~ 칸데오 텐진</span></td><td class="num">¥43,400~62,400</td><td class="num">¥38,600~57,900</td></tr>
         <tr><td>식비<span class="p">저녁 3번, 야타이, 라멘, 아침</span></td><td class="num">¥25,000~35,000</td><td class="num">¥25,000~35,000</td></tr>
         <tr><td>온천 · 관광 · 기타<span class="p">스모를 보면 의자석 ¥2,500~6,000</span></td><td class="num">¥3,000~10,000</td><td class="num">¥3,000~10,000</td></tr>
       </tbody>
       <tfoot>
-        <tr><td>합계 (호텔)</td><td class="num">¥150,000~195,300<span class="p">약 131만~170만 원</span></td><td class="num">¥137,500~182,800<span class="p">약 120만~159만 원</span></td></tr>
-        <tr><td>합계 (에어비앤비)<span class="p">무료 주차 숙소 4곳, 1인 A ¥15,000~46,000 · B ¥13,000~38,500</span></td><td class="num">¥122,000~178,800<span class="p">약 106만~156만 원</span></td><td class="num">¥112,000~163,300<span class="p">약 97만~142만 원</span></td></tr>
+        <tr><td>합계 (호텔)</td><td class="num">¥146,000~194,600<span class="p">약 127만~169만 원</span></td><td class="num">¥133,200~182,100<span class="p">약 116만~158만 원</span></td></tr>
+        <tr><td>합계 (에어비앤비)<span class="p">도심 2곳, 숙소 1인 A ¥46,000~52,400 · B ¥38,400~46,500</span></td><td class="num">¥148,600~184,600<span class="p">약 129만~161만 원</span></td><td class="num">¥133,000~170,700<span class="p">약 116만~149만 원</span></td></tr>
         <tr><td>항공 왕복<span class="p">아침편 3개 (제주항공 ~ 아시아나)</span></td><td class="num">₩38만~44만</td><td class="num">₩42만~49만</td></tr>
-        <tr><td>항공 포함 합계 (호텔)</td><td class="num">약 169만~214만 원</td><td class="num">약 162만~208만 원</td></tr>
+        <tr><td>항공 포함 합계 (호텔)</td><td class="num">약 165만~213만 원</td><td class="num">약 158만~207만 원</td></tr>
       </tfoot>
     </table>
   </div>
@@ -1114,8 +1027,6 @@ footer a{color:var(--ink-2)}
     <a href="https://cm-g.co.jp/the-classic/guide/price/">더 클래식 요금·이용 규정</a> ·
     <a href="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s4111.html">국립천문대 일출·일몰</a> ·
     <a href="https://rent.toyota.co.jp/affiliate_rental/service/car/class/charge.aspx?searchKbn=4">도요타 렌터카 요금</a> ·
-    <a href="https://www.mk-group.co.jp/fukuoka/plan/golf.php">MK 후쿠오카 골프 정액</a> ·
-    <a href="https://www.taxi-fukcty.or.jp/charge">후쿠오카시 택시 요금</a> ·
     <a href="https://sumo.pia.jp/en/">스모 티켓</a> ·
     <a href="https://www.npa.go.jp/bureau/traffic/insyu/info.html">일본 경찰청 음주운전</a>
   </p>
