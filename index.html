@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>후쿠오카 골프 원정</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F1F4EF;
+  --surface:#FBFCF9;
+  --surface-2:#E7EDE7;
+  --ink:#13211A;
+  --ink-2:#44544B;
+  --muted:#66746C;
+  --line:#D5DDD6;
+  --line-strong:#B7C4BB;
+  --accent:#156E47;
+  --accent-text:#125E3D;
+  --accent-wash:#DDEBE2;
+  --gold:#B8800F;
+  --gold-text:#835A05;
+  --gold-wash:#F3E8CF;
+  --mark-neutral:#B9C5BD;
+  --night:#E3E8E3;
+  --on-play:#FFFFFF;
+  --on-lunch:#1A1A19;
+  --warn:#fab219;
+  --crit:#d03b3b;
+  --font-display:"Hahmlet","Noto Serif KR","AppleMyungjo",serif;
+  --font-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0C1310;
+    --surface:#151F1A;
+    --surface-2:#1C2822;
+    --ink:#E4EBE6;
+    --ink-2:#AFBCB4;
+    --muted:#8A988F;
+    --line:#26332D;
+    --line-strong:#3A4942;
+    --accent:#3F9E6C;
+    --accent-text:#7ACB9F;
+    --accent-wash:#18332A;
+    --gold:#B8841F;
+    --gold-text:#E0B561;
+    --gold-wash:#30281A;
+    --mark-neutral:#44544C;
+    --night:#1D2923;
+    --on-play:#0C1310;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0C1310;
+  --surface:#151F1A;
+  --surface-2:#1C2822;
+  --ink:#E4EBE6;
+  --ink-2:#AFBCB4;
+  --muted:#8A988F;
+  --line:#26332D;
+  --line-strong:#3A4942;
+  --accent:#3F9E6C;
+  --accent-text:#7ACB9F;
+  --accent-wash:#18332A;
+  --gold:#B8841F;
+  --gold-text:#E0B561;
+  --gold-wash:#30281A;
+  --mark-neutral:#44544C;
+  --night:#1D2923;
+  --on-play:#0C1310;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.7;padding-inline:16px;padding-block:0 80px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--accent-text);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.page{max-width:860px;margin-inline:auto}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.jp{color:var(--muted);font-size:.87em}
+.small{font-size:13px;color:var(--ink-2)}
+
+/* hero */
+.hero{padding-block:44px 22px;display:grid;gap:14px}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;color:var(--accent-text);margin:0;text-transform:uppercase}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(36px,8vw,56px);line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{font-size:16.5px;line-height:1.7;color:var(--ink-2);margin:0;max-width:62ch}
+
+/* sticky nav */
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-inline:-16px;padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+.topnav ul{display:flex;gap:6px;list-style:none;margin:0 auto;padding:0 0 2px;max-width:860px;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:inline-block;white-space:nowrap;padding:5px 12px;border-radius:999px;font-size:13px;font-weight:500;color:var(--ink-2);text-decoration:none;background:var(--surface);border:1px solid var(--line)}
+.topnav a:hover{border-color:var(--line-strong);color:var(--ink)}
+.topnav a[aria-current="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* sections */
+section{padding-block:44px 6px}
+section + section{border-top:1px solid var(--line)}
+.kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin:0 0 6px}
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,4.8vw,31px);line-height:1.25;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+h3{font-size:17px;font-weight:600;line-height:1.45;margin:30px 0 8px;text-wrap:balance}
+h4{font-size:15px;font-weight:600;margin:0}
+p{margin:0 0 12px;max-width:68ch}
+.sub{color:var(--ink-2);margin-bottom:4px}
+ul.plain{margin:0 0 12px;padding-left:1.1em}
+ul.plain li{margin-bottom:6px;max-width:68ch}
+ul.plain li::marker{color:var(--muted)}
+
+/* notices (status icon + label, never color alone) */
+.notice{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-block:14px}
+.notice svg{width:20px;height:20px;margin-top:3px}
+.notice p{margin:0 0 6px}
+.notice p:last-child{margin-bottom:0}
+.notice .lbl{font-weight:700;margin-right:4px}
+
+/* scorecard summary */
+.tbl-wrap{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.55}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{font-size:12px;font-weight:600;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.scorecard table{min-width:340px}
+.scorecard thead th{background:var(--ink);color:var(--bg);font-family:var(--font-mono);font-weight:500;letter-spacing:.04em;text-align:center;padding-block:8px}
+.scorecard thead th:first-child{text-align:left}
+.scorecard tbody th{font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap;background:var(--surface-2);width:1%}
+.scorecard td{text-align:center;border-left:1px solid var(--line)}
+.scorecard td b{display:block;font-weight:600}
+.scorecard td .mono{font-size:13px}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;padding:0;list-style:none;font-size:13.5px;color:var(--ink-2)}
+.hero-meta b{color:var(--ink);font-weight:600;margin-right:4px}
+
+/* day schedule */
+.daymeta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ink-2);margin:0 0 6px}
+.sched{list-style:none;margin:14px 0 0;padding:0}
+.sched>li{display:grid;grid-template-columns:58px 1fr;gap:12px;padding-block:12px;border-top:1px solid var(--line)}
+.sched>li:last-child{border-bottom:1px solid var(--line)}
+.sched ul.plain{margin:8px 0 0;font-size:14px;color:var(--ink-2)}
+.sched ul.plain li{margin-bottom:4px}
+.sched time{font-family:var(--font-mono);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;padding-top:1px}
+.sched .what{font-weight:600}
+.sched p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--ink-2);margin-right:8px;vertical-align:1px;white-space:nowrap}
+.tag::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--mark-neutral)}
+.tag.golf::before{background:var(--accent)}
+.tag.food::before{background:var(--gold)}
+.tag.see::before{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink-2)}
+
+/* golf course cards */
+.courses{display:grid;gap:14px;margin-top:16px}
+.course{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px}
+.course-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:4px}
+.rchip{font-family:var(--font-mono);font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--accent-wash);color:var(--accent-text);white-space:nowrap}
+.rchip.alt{background:var(--surface-2);color:var(--ink-2)}
+.course h3{margin:6px 0 2px;font-family:var(--font-display);font-size:22px;font-weight:700}
+.course .why{margin:8px 0 12px;color:var(--ink-2)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 18px;margin:0}
+.facts div{border-top:1px solid var(--line);padding-top:8px}
+.facts dt{font-size:12px;color:var(--muted);font-weight:600}
+.facts dd{margin:2px 0 0;font-size:14px}
+.backups{margin-top:14px;font-size:13.5px;color:var(--ink-2)}
+
+/* round timeline chart */
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 16px 12px;margin-top:16px}
+.chart-title{font-weight:600;font-size:14px;margin:0 0 2px}
+.chart-sub{font-size:12.5px;color:var(--muted);margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);margin:0 0 14px;padding:0;list-style:none}
+.legend li{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:10px;border-radius:2px;display:inline-block}
+.legend i.night{background:var(--night);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.tl{display:grid;grid-template-columns:74px 1fr;column-gap:10px;row-gap:12px}
+.tl-label{align-self:center;font-size:12px;line-height:1.3;color:var(--muted)}
+.tl-label b{display:block;color:var(--ink);font-size:13px;font-weight:600}
+.tl-plot{grid-column:2;grid-row:1 / span 4;position:relative;pointer-events:none}
+.tl-track{grid-column:2;position:relative;z-index:1;height:30px}
+.tl-axis{grid-column:2;position:relative;height:16px;font-family:var(--font-mono);font-size:10.5px;color:var(--muted)}
+.tl-axis span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.tl-axis span:first-child{transform:none}
+.tl-axis span:last-child{transform:translateX(-100%)}
+.gridline{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.nightband{position:absolute;top:0;bottom:0;background:var(--night)}
+.sunline{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--ink-2)}
+.tl-head{grid-column:2;position:relative;z-index:1;height:16px}
+.sunlabel{position:absolute;top:0;font-size:11px;font-weight:600;line-height:16px;color:var(--ink-2);white-space:nowrap;padding-left:5px}
+.sunlabel.set{transform:translateX(-100%);padding-left:0;padding-right:5px}
+.seg{position:absolute;top:5px;height:20px;border-radius:4px;background:var(--mark-neutral);cursor:default;display:flex;align-items:center;justify-content:center;overflow:visible}
+.seg.play{background:var(--accent)}
+.seg.lunch{background:var(--gold)}
+.seg:hover,.seg:focus-visible{filter:brightness(1.12)}
+.seg .in{font-size:11px;font-weight:600;color:var(--ink);white-space:nowrap;pointer-events:none}
+.seg.play .in{color:var(--on-play)}
+.seg.lunch .in{color:var(--on-lunch)}
+.seg .in[hidden]{display:none}
+.tl-end{position:absolute;top:6px;font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--ink-2);white-space:nowrap;pointer-events:none}
+
+/* tooltip */
+.tip{position:fixed;z-index:60;left:0;top:0;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12.5px;line-height:1.45;padding:8px 10px;border-radius:6px;max-width:250px;opacity:0;transform:translateY(4px);transition:opacity .12s ease,transform .12s ease}
+.tip.on{opacity:1;transform:none}
+.tip b{display:block;font-family:var(--font-mono);font-size:13px;font-weight:600}
+@media (prefers-reduced-motion: reduce){.tip{transition:none}}
+
+/* cost comparison */
+.costlist{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:4px 16px 6px}
+.cost-scale{padding:10px 0 6px;border-bottom:1px solid var(--line)}
+.cost-scale-title{font-size:12px;font-weight:600;color:var(--ink-2);margin:0}
+.opt-row{display:grid;gap:10px;padding-block:14px;border-bottom:1px solid var(--line)}
+.opt-row:last-child{border-bottom:0}
+.opt-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:6px 16px}
+.opt-name{flex:1 1 260px;min-width:0}
+.opt-name b{font-weight:600}
+.opt-desc{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.opt-num{flex:0 0 auto;text-align:right}
+.opt-num .pp{display:block;font-family:var(--font-mono);font-size:14.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.opt-num .tot{display:block;font-size:12.5px;color:var(--muted)}
+.opt-row.na .pp{color:var(--muted);font-family:var(--font-body)}
+.range{position:relative;height:14px;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:25% 100%;cursor:default}
+.range-ext,.range-solid{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;background:var(--mark-neutral)}
+.range-ext{opacity:.4}
+.range.rec .range-ext,.range.rec .range-solid{background:var(--accent)}
+.range:hover .range-solid,.range:focus-visible .range-solid{filter:brightness(1.12)}
+.scale{position:relative;height:14px;margin-top:4px;font-family:var(--font-mono);font-size:10.5px;font-weight:400;color:var(--muted)}
+.scale span{position:absolute;top:0;transform:translateX(-50%)}
+.scale span:first-child{transform:none}
+.scale span:last-child{transform:translateX(-100%)}
+.pick{display:inline-block;font-size:11px;font-weight:700;color:var(--accent-text);border:1px solid var(--accent);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:2px}
+
+/* food & stay lists */
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 24px;margin-top:10px}
+.item{padding-block:12px;border-top:1px solid var(--line)}
+.item .cat{font-size:12px;font-weight:600;color:var(--gold-text)}
+.item h4{margin:2px 0 2px}
+.item p{font-size:13.5px;color:var(--ink-2);margin:4px 0 0}
+.item .meta{font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px}
+
+/* checklist */
+.checks{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 22px}
+.checks label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:14px}
+.checks input{width:18px;height:18px;accent-color:var(--accent);margin:3px 0 0;flex:none}
+.checks input:checked + span{color:var(--muted);text-decoration:line-through}
+.checks small{display:block;color:var(--muted);font-size:12.5px;text-decoration:none}
+
+/* A/B comparison tables */
+td .p,th .p{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:2px;white-space:normal}
+.vs table,table.vs{min-width:420px}
+.vs tbody th{font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap;background:var(--surface-2);width:1%}
+.vs td .p{font-family:var(--font-mono);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+table.nightly{min-width:520px}
+table.nightly td:first-child{font-weight:500}
+
+/* option tables & golf option cards */
+table.tiers{min-width:640px}
+.tier{display:inline-block;font-size:11px;font-weight:700;color:var(--gold-text);background:var(--gold-wash);border-radius:4px;padding:0 6px;margin-right:6px;vertical-align:1px}
+table.tiers td b a{color:inherit}
+.optday{margin-top:18px}
+.optday h4{font-size:14.5px;margin:0 0 8px}
+.optgrid{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:720px){.optgrid{grid-template-columns:repeat(3,1fr)}}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.opt.cur{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.opt b{display:block;font-size:14px;font-weight:600}
+.opt .curtag{font-size:11px;font-weight:700;color:var(--accent-text);margin-left:4px}
+.opt .price{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-weight:600;font-size:13.5px;margin:3px 0 0;color:var(--ink)}
+.opt p{font-size:12.5px;color:var(--ink-2);margin:4px 0 0}
+
+/* budget */
+.budget td:first-child{width:40%}
+.budget tfoot td{font-weight:700;border-top:1px solid var(--line-strong);border-bottom:0}
+
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer p{max-width:none}
+footer a{color:var(--ink-2)}
+
+.print-only{display:none}
+.range-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+@page{size:A4;margin:14mm 12mm 16mm;@bottom-center{content:counter(page) " / " counter(pages);font-size:9px;color:#66746C}}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  :root{--bg:#FFFFFF}
+  body{background:#FFFFFF;font-size:12.5px;line-height:1.6;padding-block:0}
+  .topnav,.screen-only,.tip{display:none!important}
+  .print-only{display:block}
+  .hero{padding-block:0 12px;gap:10px}
+  h1{font-size:38px}
+  .lede{font-size:14px}
+  section{padding-block:8px 2px}
+  h2{font-size:23px;margin-bottom:6px}
+  h3{font-size:14.5px;margin:18px 0 6px}
+  .notice{padding:10px 12px;margin-block:10px}
+  .sched{margin-top:8px}
+  .sched>li{padding-block:7px;gap:10px}
+  .sched time{font-size:12.5px}
+  .sched p,.sched ul.plain{font-size:12px;margin-top:2px}
+  .courses{gap:10px;margin-top:10px}
+  .course{padding:12px 14px}
+  .course h3{font-size:18px;margin-top:4px}
+  .course .why{margin:6px 0 8px}
+  .facts{gap:6px 14px}
+  .facts div{padding-top:5px}
+  .facts dd{font-size:12.5px}
+  .chart{padding:12px 14px 10px;margin-top:10px}
+  th,td{padding:7px 10px}
+  table{font-size:12.5px}
+  .item{padding-block:8px}
+  .item p{font-size:12.5px}
+  .opt-row{padding-block:10px;gap:8px}
+  .checks label{padding:6px 0;font-size:13px}
+  ul.plain li{margin-bottom:4px}
+  footer{margin-top:24px}
+  #day1,#day2,#day3,#planb{break-before:page}
+  h2,h3,.kicker{break-after:avoid}
+  .course,.chart,.opt-row,.opt,.notice,.sched>li,.item,tr,.checks li,.cost-scale{break-inside:avoid}
+  .tbl-wrap{overflow:visible}
+  a{text-decoration:none}
+}
+
+@media (max-width:520px){
+  body{font-size:14.5px}
+  .hero{padding-block:32px 18px}
+  .sched li{grid-template-columns:50px 1fr;gap:10px}
+  .tl{grid-template-columns:58px 1fr}
+  .course{padding:16px 14px 14px}
+  th,td{padding:9px 10px}
+  .opt-num{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<header class="hero" id="top">
+  <p class="eyebrow">FUK · 2026년 11월 · 4인 · 3라운드 · A안 11/20~23 · B안 11/19~22</p>
+  <h1>후쿠오카 골프 원정</h1>
+  <p class="lede">하카타에 숙소를 두고 렌터카 한 대로 세 코스를 도는 3박 4일 일정입니다. 기본인 A안(11/20~23)은 첫날 공항에서 곧장 오후 스루 라운드, 둘째 날 아침 라운드 뒤 온천과 이자카야, 셋째 날 명문 코스와 회식입니다. 11/23 일본 공휴일을 피해 하루 당긴 B안(11/19~22)도 함께 넣었으니 비교해 보세요.</p>
+  <ul class="hero-meta">
+    <li><b>이동</b>렌터카 1대 (노아·복시급)</li>
+    <li><b>숙소</b>하카타역~나카스</li>
+    <li><b>1인 현지 경비</b>A안 약 ¥15만~20만 · B안 약 ¥14만~18만 (항공 별도)</li>
+  </ul>
+</header>
+
+<nav class="topnav" aria-label="섹션 바로가기">
+  <ul>
+    <li><a href="#summary">요약</a></li>
+    <li><a href="#compare">날짜 비교</a></li>
+    <li><a href="#flights">항공권</a></li>
+    <li><a href="#courses">골프장</a></li>
+    <li><a href="#day1">A안 1일차</a></li>
+    <li><a href="#day2">A안 2일차</a></li>
+    <li><a href="#day3">A안 3일차</a></li>
+    <li><a href="#day4">A안 4일차</a></li>
+    <li><a href="#planb">B안 일정</a></li>
+    <li><a href="#transport">교통비</a></li>
+    <li><a href="#stay">숙소</a></li>
+    <li><a href="#food">맛집</a></li>
+    <li><a href="#tips">예약 팁</a></li>
+    <li><a href="#pack">준비물</a></li>
+    <li><a href="#budget">예산</a></li>
+  </ul>
+</nav>
+
+<!-- ===== SUMMARY ===== -->
+<section id="summary">
+  <p class="kicker">Summary</p>
+  <h2>한눈에 보는 3라운드</h2>
+
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 19.2 18H.8Z" fill="#fab219"/><path d="M10 7.6v5" stroke="#1a1a19" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="15.1" r="1.15" fill="#1a1a19"/></svg>
+    <div>
+      <p><span class="lbl">주의: 지금 예약해야 합니다.</span>11/23(월)은 일본 공휴일(근로감사의 날)이라 11/21~23이 일본 3연휴입니다. 토·일·월 모두 주말 요금이 붙고, 규슈 스모 대회(11/8~22) 마지막 사흘과도 겹칩니다. 9월 28일 조회 기준으로 토요일 이른 티타임과 하카타 호텔의 토요일 객실이 거의 남지 않았습니다. 하루 당긴 B안(11/19~22)은 주말이 토요일 하루로 줄어 예약이 쉽습니다.</p>
+    </div>
+  </div>
+
+  <p class="small">아래 표는 기본 일정인 A안(11/20~23)입니다. B안(11/19~22)은 <a href="#compare">날짜 비교</a>와 <a href="#planb">B안 일정</a>에 있습니다.</p>
+  <div class="tbl-wrap scorecard">
+    <table>
+      <caption class="sr-only">A안 라운드별 코스, 방식, 티오프, 종료 시각, 이동 시간, 요금 요약</caption>
+      <thead>
+        <tr><th scope="col">A안</th><th scope="col">1R · 11/20 금</th><th scope="col">2R · 11/21 토</th><th scope="col">3R · 11/22 일</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">코스</th><td><b>치쿠시가오카 GC</b><span class="jp">筑紫ヶ丘</span></td><td><b>후쿠오카 국제 CC</b><span class="jp">福岡国際</span></td><td><b>아소 이이즈카 GC</b><span class="jp">麻生飯塚 · 명문</span></td></tr>
+        <tr><th scope="row">방식</th><td>스루 (점심 없음)</td><td>전반 → 점심 → 후반</td><td>전반 → 점심 → 후반</td></tr>
+        <tr><th scope="row">티오프</th><td class="mono">11:22</td><td class="mono">08:28</td><td class="mono">08:35~08:56</td></tr>
+        <tr><th scope="row">종료 예상</th><td class="mono">15:55</td><td class="mono">14:05</td><td class="mono">14:15</td></tr>
+        <tr><th scope="row">이동</th><td>공항에서 25~40분</td><td>하카타에서 35~45분</td><td>하카타에서 40~50분</td></tr>
+        <tr><th scope="row">1인 요금</th><td class="mono">¥15,000</td><td class="mono">¥22,400</td><td class="mono">¥22,000</td></tr>
+        <tr><th scope="row">라운드 후</th><td>모츠나베 · 야타이</td><td>온천 · 쇼핑 · 이자카야</td><td>회식</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">요금은 4인 1조 1인 기준이며 카트, 소비세, 골프장 이용세가 포함되고 점심은 별도입니다. 티오프는 9월 28일에 비어 있던 시간이라 예약 시점에 따라 달라집니다.</p>
+
+  <h3>이렇게 짠 이유</h3>
+  <ul class="plain">
+    <li><b>후쿠오카 명문 코스 상당수는 외국인끼리 예약할 수 없습니다.</b> 게야·퀸즈힐·라이잔은 일본 국적이 아니면 회원이 동반해야 하고, 고가·와지로는 회원만 예약할 수 있습니다. 그래서 외국인도 일요일에 비지터로 칠 수 있는 토너먼트 코스인 아소 이이즈카를 명문 라운드로 골랐습니다.</li>
+    <li><b>입국 당일 플레이를 거절하는 코스가 있습니다.</b> 아소 이이즈카, JR 우치노, 야스고원이 그렇습니다. 1일차는 입국일에도 받아 주고 공항에서 가까운 치쿠시가오카의 스루 플레이로 잡았습니다.</li>
+    <li><b>해가 17:13에 집니다.</b> 점심을 끼우는 라운드는 늦어도 10시 전후에 나가야 해 있을 때 끝납니다. 2·3일차는 8시대에 티오프해서 오후 2시 무렵 끝나도록 맞췄습니다.</li>
+  </ul>
+
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--accent)"/><path d="M10 9v5.2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="5.9" r="1.15" fill="#fff"/></svg>
+    <div>
+      <p><span class="lbl">업그레이드: 일행 중 일본어 가능자가 있다면</span>1일차를 <b>더 클래식 GC</b>(2020 일본여자오픈 개최)로 바꾸세요. 금요일 11:28~12:08 출발은 전후반 사이 휴식이 15분이라 사실상 스루이고, 메이저 대회 코스를 평일 요금 ¥17,070에 칠 수 있습니다. 조건은 한 조에 일본어로 대화하고 안내를 이해할 수 있는 사람이 1명 이상 있어야 한다는 것입니다.</p>
+    </div>
+  </div>
+
+  <h3>왜 마쓰야마가 아니라 후쿠오카인가</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th scope="col">기준</th><th scope="col">후쿠오카</th><th scope="col">마쓰야마</th></tr></thead>
+      <tbody>
+        <tr><td>인천발 항공편</td><td>하루 23~25편, 첫 편 06:00 출발</td><td>제주항공 하루 2편 (07:00, 13:15 출발)</td></tr>
+        <tr><td>이번 주말 골프장</td><td>공항·시내에서 40분 거리에 선택지가 많음</td><td>대표 코스 엘리에르 GC 마쓰야마는 11/19~22 여자 투어 대회로 이용 불가</td></tr>
+        <tr><td>먹거리 · 밤</td><td>야타이, 모츠나베, 나카스</td><td>조용한 편</td></tr>
+        <tr><td>온천</td><td>시내 온천 호텔과 당일 온천</td><td>도고 온천이 강점</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:10px">첫날 라운드와 저녁 동선까지 생각하면 후쿠오카가 낫습니다. 마쓰야마는 도고 온천 중심의 느긋한 여행에 어울리는데, 이번 주말에는 대표 코스가 대회로 막혀 있습니다.</p>
+</section>
+
+<!-- ===== COMPARE ===== -->
+<section id="compare">
+  <p class="kicker">Compare dates</p>
+  <h2>날짜 비교: A안 11/20~23 vs B안 11/19~22</h2>
+  <p class="sub">금·토는 두 안이 같고, A안의 일요일이 B안에서는 목요일로 바뀝니다. 11/23(월)이 일본 공휴일이라 A안은 일요일 라운드가 주말 요금이고, 일요일 밤 숙박도 공휴일 전날이라 비쌉니다.</p>
+
+  <div class="tbl-wrap">
+    <table class="vs">
+      <caption class="sr-only">A안과 B안의 라운드, 숙박, 항공, 연차, 예약 난이도, 1인 합계 비교</caption>
+      <thead><tr><th scope="col">항목</th><th scope="col">A안 · 11/20 금 → 23 월</th><th scope="col">B안 · 11/19 목 → 22 일</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">1R</th><td>금 치쿠시가오카 스루 11:22<span class="p">¥15,000</span></td><td>목 치쿠시가오카 스루 11:22<span class="p">¥15,000</span></td></tr>
+        <tr><th scope="row">2R</th><td>토 후쿠오카 국제 08:28<span class="p">¥22,400</span></td><td>금 아소 이이즈카 (명문) 8시대<span class="p">¥14,000 평일</span></td></tr>
+        <tr><th scope="row">3R</th><td>일 아소 이이즈카 (명문) 08:35~08:56<span class="p">¥22,000 주말</span></td><td>토 후쿠오카 국제 08:28<span class="p">¥22,400</span></td></tr>
+        <tr><th scope="row">골프 합계</th><td class="mono">¥59,400</td><td class="mono"><b>¥51,400</b> (−¥8,000)</td></tr>
+        <tr><th scope="row">숙박</th><td>금·토·일 밤. 일요일 밤이 비싸고 이미 만실인 곳이 많음</td><td>목·금·토 밤. 목요일 밤이 가장 쌈</td></tr>
+        <tr><th scope="row">항공</th><td>금 출발 + 월 귀국<span class="p">아침편 왕복 ₩38만~44만</span></td><td>목 출발 + 일 귀국<span class="p">₩42만~49만 (일요일 귀국편이 비쌈)</span></td></tr>
+        <tr><th scope="row">연차</th><td>금 · 월 (평일 2일)</td><td>목 · 금 (평일 2일)</td></tr>
+        <tr><th scope="row">예약</th><td>토·일 모두 주말이라 티타임·객실이 부족</td><td>주말은 토요일 하루</td></tr>
+        <tr><th scope="row">저녁 식당</th><td>일요일 휴무 식당 주의 (미즈타키 나가노, 신미우라 등)</td><td>일요일 저녁 일정이 없음</td></tr>
+        <tr><th scope="row">현지 경비</th><td class="mono">¥150,000~195,300<span class="p">약 131만~170만 원</span></td><td class="mono"><b>¥137,500~182,800</b><span class="p">약 120만~159만 원</span></td></tr>
+        <tr><th scope="row">항공 포함</th><td class="mono">약 169만~214만 원</td><td class="mono"><b>약 162만~208만 원</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">1인 기준, 호텔은 아파~칸데오급 2인 1실입니다. 항공은 아래 아침편 3개의 왕복 요금 범위입니다. 자세한 내역은 <a href="#budget">예산</a>에 있습니다.</p>
+
+  <h3>호텔 날짜별 요금 (1실 2인, 조식 제외)</h3>
+  <div class="tbl-wrap">
+    <table class="nightly">
+      <caption class="sr-only">호텔 세 곳의 11월 19일부터 22일까지 1박 요금</caption>
+      <thead><tr><th scope="col">호텔</th><th scope="col" class="num">목 11/19<br><span class="small">B안만</span></th><th scope="col" class="num">금 11/20</th><th scope="col" class="num">토 11/21</th><th scope="col" class="num">일 11/22<br><span class="small">A안만</span></th></tr></thead>
+      <tbody>
+        <tr><td>칸데오 호텔 후쿠오카 텐진</td><td class="num">¥31,400<span class="p">트윈</span></td><td class="num">¥35,400<span class="p">트윈</span></td><td class="num">¥49,900<span class="p">더블 (트윈 만실)</span></td><td class="num">¥39,400<span class="p">킹 (트윈 만실)</span></td></tr>
+        <tr><td>도미인 PREMIUM 하카타 캐널시티마에</td><td class="num">¥39,550<span class="p">더블</span></td><td class="num">¥46,330<span class="p">더블</span></td><td class="num">만실</td><td class="num">¥48,590<span class="p">더블</span></td></tr>
+        <tr><td>니시테쓰 호텔 크룸 하카타</td><td class="num">¥28,200<span class="p">더블</span></td><td class="num">¥31,600<span class="p">트윈</span></td><td class="num">만실</td><td class="num">만실</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">9월 28일 라쿠텐 트래블 조회 기준입니다. 일요일 밤이 목요일 밤보다 1실 ¥8,000~9,000 비싸서, 2인 1실이면 1인 ¥4,000~4,500 차이가 납니다.</p>
+
+  <h3>나머지 비용</h3>
+  <ul class="plain">
+    <li><b>렌터카:</b> 대여 기간이 같아서 거의 같습니다.</li>
+    <li><b>항공:</b> 같은 아침편 기준 B안이 1인 ₩3.5만~7.5만 비쌉니다(제주항공 +₩41,000, 아시아나 +₩35,000, 진에어 +₩75,000). 일요일 귀국편이 월요일보다 비싸기 때문입니다.</li>
+  </ul>
+
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--accent)"/><path d="M10 9v5.2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="5.9" r="1.15" fill="#fff"/></svg>
+    <div><p><span class="lbl">결론</span>골프와 숙박에서 B안이 1인 약 10만 원 싸지만, 항공에서 3.5만~7.5만 원을 더 내서 전체 차이는 약 3만~7만 원입니다. 금액 차이가 크지 않으니 연차 일정에 맞춰 고르면 됩니다. 다만 티타임과 객실은 주말이 토요일 하루뿐인 B안이 훨씬 잡기 쉽고, 명문 라운드도 평일 요금으로 칠 수 있습니다.</p></div>
+  </div>
+</section>
+
+<!-- ===== FLIGHTS ===== -->
+<section id="flights">
+  <p class="kicker">Flights</p>
+  <h2>항공권: 첫날 라운드가 되는 아침편 3개</h2>
+  <p class="sub">첫날 11:22 티오프에 맞추려면 후쿠오카에 08:30 전에 내려야 합니다. 인천 출발 직항 중 이 조건을 맞추는 아침편 세 개입니다. 요금은 9월 28일 구글 항공권에서 조회한 성인 1명 왕복 최저가입니다.</p>
+  <div class="tbl-wrap">
+    <table class="tiers">
+      <caption class="sr-only">첫날 라운드가 가능한 인천발 아침 항공편 세 개의 시간, 왕복 요금, 골프백 규정</caption>
+      <thead><tr><th scope="col">항공편 · 인천 → 후쿠오카</th><th scope="col" class="num">A안 왕복<span class="p">11/20~23</span></th><th scope="col" class="num">B안 왕복<span class="p">11/19~22</span></th><th scope="col">골프백</th></tr></thead>
+      <tbody>
+        <tr><td><b>제주항공 06:30 → 07:55</b><span class="p">가장 쌈</span></td><td class="num">₩382,600</td><td class="num">₩423,600</td><td>운임에 따라 무료 위탁 0 / 15 / 30kg. 골프 장비 수수료는 따로 없음. 무료 수하물이 없는 운임이면 15kg 포함 운임으로 올려야 함. 1년에 여러 번 간다면 골프 멤버십(1년 ₩149,000, 골프 장비 25kg 추가)</td></tr>
+        <tr><td><b>진에어 06:55 → 08:15</b><span class="p">골프백만 부치면 추가 0원</span></td><td class="num">₩411,500</td><td class="num">₩486,500</td><td>일본 노선 무료 위탁 15kg 기본. 골프백을 15kg 안으로 맞추고 옷은 기내 10kg 가방에 넣으면 추가 요금 없음</td></tr>
+        <tr><td><b>아시아나항공 06:00 → 07:35</b><span class="p">짐이 많을 때 가장 편함</span></td><td class="num">₩435,900</td><td class="num">₩470,900</td><td>무료 23kg 1개. 골프백과 가방 1개의 합이 32kg 미만이면 1개로 인정해 캐리어까지 추가 요금 없음</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">왕복 최저가는 같은 항공사의 가장 싼 귀국편과 묶은 값이라 오후 귀국편을 고르면 올라갈 수 있습니다. 골프백 규정은 2025~2026년 항공사 안내와 기사 기준이니 예약할 때 운임 조건에서 다시 확인하세요. 에어부산 07:25(08:55 도착)와 대한항공 07:45(09:15 도착)는 11:22 티오프에 빠듯해서 뺐습니다. 대한항공은 더 클래식 12:08로 바꿀 때만 쓸 수 있습니다.</p>
+
+  <h3>귀국편 참고 (편도, 9월 28일 구글 항공권)</h3>
+  <div class="tbl-wrap">
+    <table>
+      <caption class="sr-only">A안과 B안 귀국일의 오전, 오후 귀국편 편도 요금</caption>
+      <thead><tr><th scope="col">귀국일</th><th scope="col">오전 (가장 쌈)</th><th scope="col">오후·저녁 (다자이후 들를 때)</th></tr></thead>
+      <tbody>
+        <tr><td><b>A안 11/23 월</b></td><td>아시아나 08:35 ₩175,692 · 진에어 09:30 ₩182,158 · 제주항공 08:55 ₩187,330</td><td>에어서울 17:00 ₩233,882 · 제주항공 13:00 ₩238,193 · 진에어 14:40 ₩270,090</td></tr>
+        <tr><td><b>B안 11/22 일</b></td><td>제주항공 08:55 ₩241,641 · 진에어 09:30 ₩285,607 · 아시아나 08:35 ₩320,521</td><td>에어서울 17:00 ₩302,849 · 제주항공 13:00 ₩313,193 · 진에어 14:40 ₩362,332</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">일요일 귀국편이 월요일보다 편도 ₩5만~15만 비쌉니다. 오후 비행기로 다자이후를 들르려면 A안이 유리합니다.</p>
+</section>
+
+<!-- ===== COURSES ===== -->
+<section id="courses">
+  <p class="kicker">Courses</p>
+  <h2>골프장 3곳과 티오프 설계</h2>
+  <p class="sub">세 곳 모두 하카타나 공항에서 편도 1시간 안쪽이고, 외국인 비지터가 인터넷으로 예약할 수 있습니다. 평점은 라쿠텐 GORA 이용자 평가입니다.</p>
+
+  <div class="courses">
+    <article class="course">
+      <div class="course-head"><span class="rchip">A안 1R · 11/20 금 · 스루 11:22</span><span class="rchip alt">B안 1R · 11/19 목</span></div>
+      <h3>치쿠시가오카 골프클럽</h3>
+      <p class="jp">筑紫ヶ丘ゴルフクラブ · 나카가와시</p>
+      <p class="why">1976년에 문을 연 회원제 클럽입니다. 입국 당일에도 예약을 받고, 금요일 스루 플레이를 11:22 출발까지 받아 첫날 코스로 가장 현실적입니다. 페어웨이가 좁고 도그레그가 많은 산악형이라 거리보다 방향이 중요합니다.</p>
+      <dl class="facts">
+        <div><dt>거리</dt><dd>공항에서 약 25~40분 (공식 안내 약 40분)</dd></div>
+        <div><dt>코스</dt><dd>27홀 · 벤트 원그린 · 산악형</dd></div>
+        <div><dt>평점</dt><dd>GORA 리뷰 1,211건. 2026년 7~9월 리뷰는 대부분 4~5점</dd></div>
+        <div><dt>요금 (금·목)</dt><dd>스루 ¥15,000 (목요일도 같음). 스테이크 점심이 포함된 플랜은 ¥17,460</dd></div>
+        <div><dt>예약</dt><dd>라쿠텐 GORA. 해외 고객은 연락 가능한 휴대폰 번호나 이메일을 등록해야 예약이 됨</dd></div>
+        <div><dt>주의</dt><dd>늦게 도착해 홀 수가 줄어도 18홀 요금. 3인 +¥550, 2인 +¥3,300. 7일 전부터 취소료 1조 ¥8,000 (주말 ¥10,000)</dd></div>
+      </dl>
+    </article>
+
+    <article class="course">
+      <div class="course-head"><span class="rchip">A안 2R · 11/21 토 · 08:28</span><span class="rchip alt">B안 3R · 11/21 토</span></div>
+      <h3>후쿠오카 국제 컨트리클럽</h3>
+      <p class="jp">福岡国際カントリークラブ (PGM) · 무나카타시</p>
+      <p class="why">1969년에 개장한 36홀 코스로, 나나마타 코스에서 야쿠르트 레이디스를 20년간 열었습니다. 9월 28일 조회 기준으로 토요일 7:30~8:30 사이에 빈 티타임이 남은 곳은 사실상 여기뿐이었습니다. 한국어 예약 페이지가 있는 PGM 계열입니다.</p>
+      <dl class="facts">
+        <div><dt>거리</dt><dd>하카타에서 34km · 35~45분 (규슈도 와카미야 IC에서 5km)</dd></div>
+        <div><dt>코스</dt><dd>36홀 (나카야마·나나마타) · 벤트 · 구릉</dd></div>
+        <div><dt>평점</dt><dd>GORA 4.0 (리뷰 3,539건). 최근 정비 상태가 좋아졌다는 평</dd></div>
+        <div><dt>요금 (토)</dt><dd>¥22,400. 락커·목욕 ¥440 별도</dd></div>
+        <div><dt>예약</dt><dd>GORA 또는 PGM 공식 사이트 (한국어 페이지 있음)</dd></div>
+        <div><dt>주의</dt><dd>11월엔 스루가 없고 점심이 1시간을 넘길 수 있음. 연습장은 8/19부터 휴장. 주말 취소료는 14일 전부터 1조 ¥8,000</dd></div>
+      </dl>
+    </article>
+
+    <article class="course">
+      <div class="course-head"><span class="rchip">A안 3R · 11/22 일 · 08:35~08:56</span><span class="rchip alt">B안 2R · 11/20 금 · 평일</span><span class="rchip alt">명문</span></div>
+      <h3>아소 이이즈카 골프클럽</h3>
+      <p class="jp">麻生飯塚ゴルフ倶楽部 · 가호군 게이센마치</p>
+      <p class="why">1973년에 개장해 젠린 후쿠오카 오픈(1978~94), JGTO 아소 이이즈카 메모리얼(2004~06), 2013 일본 시니어 오픈을 치른 토너먼트 코스입니다. 그린 관리가 좋다는 평이 많고, 굴곡이 미묘한 그린과 깊은 러프 때문에 난도가 있습니다. 외국인도 일요일 비지터로 예약할 수 있는 몇 안 되는 명문입니다.</p>
+      <dl class="facts">
+        <div><dt>거리</dt><dd>하카타에서 39km · 40~50분 (규슈도 후쿠오카 IC)</dd></div>
+        <div><dt>코스</dt><dd>27홀 · 벤트 · 구릉. 코스·그린 난도 모두 5점 만점에 4</dd></div>
+        <div><dt>평점</dt><dd>GORA 4.1 (리뷰 2,594건)</dd></div>
+        <div><dt>요금</dt><dd>토일공휴일 셀프 ¥22,000 · 캐디 ¥24,000 (A안). 평일 셀프 ¥14,000 · 캐디 ¥16,000 (B안). 공식 요금표 기준</dd></div>
+        <div><dt>예약</dt><dd>GORA 또는 공식 웹. 여행사·대리 예약 금지 (적발 시 플레이 거부 + 취소료 100%). 동반자 이름은 1주일 전까지 등록</dd></div>
+        <div><dt>주의</dt><dd>입국 당일 플레이 불가. 3일 전부터 취소료 100% × 인원. 11월엔 재킷을 입고 입장</dd></div>
+      </dl>
+    </article>
+
+    <article class="course">
+      <div class="course-head"><span class="rchip alt">업그레이드 · 1R 대신</span></div>
+      <h3>더 클래식 골프클럽</h3>
+      <p class="jp">ザ・クラシックゴルフ倶楽部 · 미야와카시</p>
+      <p class="why">2020 일본여자오픈(우승 하라 에리카)과 2017 일본 시니어 오픈을 치렀고, 2028 일본여자오픈도 예정된 코스입니다. 일행 중 일본어 가능자가 있으면 1일차를 여기로 바꾸세요. 명문 코스를 평일 요금으로 칠 수 있습니다.</p>
+      <dl class="facts">
+        <div><dt>거리</dt><dd>공항·하카타에서 42km · 40~50분</dd></div>
+        <div><dt>평점</dt><dd>GORA 리뷰 725건 중 5점 42%, 4점 49%. 그린 관리 호평</dd></div>
+        <div><dt>요금 (금)</dt><dd>셀프 ¥17,070 · 캐디 ¥21,050 (토·공휴일 셀프 ¥24,450)</dd></div>
+        <div><dt>티오프</dt><dd>금요일 11:28~12:08 출발은 15분 휴식이라 12:08에 나가도 16:50 전후 종료. 9/28 기준 11:44·11:52·12:08이 비어 있었음</dd></div>
+        <div><dt>조건</dt><dd>한 조에 일본어 가능자 1명 이상 필수. 일요일 비지터 불가. 대리·단체명 예약 불가</dd></div>
+        <div><dt>주의</dt><dd>재킷 입장 (6~9월 제외), 셔츠 인. 평일 취소료는 3일 전부터 1조 ¥5,000</dd></div>
+      </dl>
+    </article>
+  </div>
+
+  <p class="backups"><b>예비 코스.</b> 1R: 후쿠오카 레이크사이드 CC (금요일 점심 포함 출발 11:15까지, 입국 당일 손님은 1시간 전 도착). 2R: JR 우치노 CC (한국인 선호도 높음, 7:25~8:00 출발은 스루, 직원은 일본어만 가능), 후쿠오카 레이크사이드 (토 11:15). 3R: 후쿠오카 레이크사이드 (일 08:08·08:38), 후쿠오카 국제 (일 07:39·07:53).</p>
+
+  <h3>이번 일정에서 뺀 명문 코스</h3>
+  <ul class="plain">
+    <li>고가 GC (일본오픈 개최 코스): 회원이나 게스트 카드로만 칠 수 있음</li>
+    <li>후쿠오카 CC 와지로 코스: 회원만 예약 가능</li>
+    <li>게야 GC (KBC 오거스타 개최지), 퀸즈힐 GC (2001 일본프로 개최): 일본 국적이 아니면 회원 동반 필요</li>
+    <li>후쿠오카 라이잔, 후쿠오카 센추리, 시마 시사이드: 외국인이나 일본어를 못 하는 손님은 회원 동반 조건</li>
+  </ul>
+
+  <h3 id="golfopts">날짜별 가성비 선택지 (하루 3곳)</h3>
+  <p class="sub">초록 테두리가 지금 일정에 넣은 코스입니다. 요금은 4인 1조 1인 기준이고 카트·세금을 포함하며 점심은 별도입니다. 시간과 요금은 9월 28일 조회 기준입니다.</p>
+
+  <div class="optday">
+    <h4>11/19 목 · B안 1일차 (도착일)</h4>
+    <div class="optgrid">
+      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분. 목요일 10:50~11:22 출발이 비어 있었음</p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>가장 쌈. 입국 당일엔 1시간 전 도착 규정이라 아시아나 06:00편일 때만 현실적. 목요일 시간은 확인 필요</p></div>
+      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:28~12:08 출발</p><p>2020 일본여자오픈 코스를 평일가로. 전후반 사이 15분 휴식. 일본어 가능자 필요</p></div>
+    </div>
+  </div>
+
+  <div class="optday">
+    <h4>11/20 금 · A안 1일차 (도착일)</h4>
+    <div class="optgrid">
+      <div class="opt cur"><b>치쿠시가오카 GC <span class="curtag">지금 일정</span></b><p class="price">¥15,000 · 스루 11:22</p><p>입국 당일 가능, 공항 25~40분</p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥11,400 · 점심 포함, 11:15까지 출발</p><p>입국 당일엔 1시간 전 도착. 공항 약 32분. 16:30 전후 종료</p></div>
+      <div class="opt"><b>더 클래식 GC</b><p class="price">¥17,070 · 11:44 / 11:52 / 12:08</p><p>9/28에 비어 있던 시간. 일본어 가능자 필요, 16:50 전후 종료</p></div>
+    </div>
+  </div>
+
+  <div class="optday">
+    <h4>11/20 금 · B안 2일차</h4>
+    <div class="optgrid">
+      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥14,000 · 8시대 출발</p><p>명문 토너먼트 코스를 평일가로. 캐디는 ¥16,000</p></div>
+      <div class="opt"><b>후쿠오카 국제 CC</b><p class="price">¥11,400 · 점심 포함</p><p>금요일 가장 쌈. 11월은 스루 없음. 락커·목욕 ¥440 별도</p></div>
+      <div class="opt"><b>센트럴 후쿠오카 GC</b><p class="price">¥11,490 · 스루 07:00~07:22</p><p>11시 반쯤 끝나 오후가 넉넉함. 폰 해기 설계, 벤트 투그린. 대리 예약 불가</p></div>
+    </div>
+  </div>
+
+  <div class="optday">
+    <h4>11/21 토 · A안 2일차 · B안 3일차</h4>
+    <div class="optgrid">
+      <div class="opt cur"><b>후쿠오카 국제 CC <span class="curtag">지금 일정</span></b><p class="price">¥22,400 · 08:28</p><p>토요일 이른 시간이 남은 거의 유일한 곳. 한국어 예약 페이지</p></div>
+      <div class="opt"><b>JR 우치노 CC</b><p class="price">¥18,920 · 7:25~8:00 스루</p><p>한국인 평이 좋은 코스. 전화 예약(직원 일본어만), 입국 당일 불가, 문신 입장 불가. 토요일 잔여 확인 필요</p></div>
+      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 토요일</p><p>한국어 홈페이지. 온라인에 토요일 시간이 안 보여 전화 문의 필요</p></div>
+    </div>
+  </div>
+
+  <div class="optday">
+    <h4>11/22 일 · A안 3일차</h4>
+    <div class="optgrid">
+      <div class="opt cur"><b>아소 이이즈카 GC <span class="curtag">지금 일정</span></b><p class="price">¥22,000 · 08:35~08:56</p><p>명문 라운드. 캐디는 ¥24,000</p></div>
+      <div class="opt"><b>트라이얼 와카미야 GC</b><p class="price">¥19,000 · 스루 10:37~11:00</p><p>일요일 가장 쌈. 15시 반 전후 종료</p></div>
+      <div class="opt"><b>후쿠오카 레이크사이드 CC</b><p class="price">¥21,900 · 08:08 / 08:38</p><p>점심 포함. 14시 반 전후 종료</p></div>
+    </div>
+  </div>
+
+  <h3 id="teetime">티오프 설계: 점심 휴식과 일몰</h3>
+  <p>일본 골프장은 전반 9홀을 돌고 클럽하우스에서 점심을 먹은 뒤 후반에 나갑니다. 4인 카트 기준 9홀에 약 2시간 15분이 걸리고, 점심은 40~60분인데 주말엔 더 길어지기도 합니다. 후반 출발 시각은 전반을 마치고 들어올 때 마스터 실(マスター室)이 정해 주므로 고를 수 없습니다.</p>
+  <p>11월 하순 후쿠오카는 06:55에 해가 뜨고 17:13에 집니다. 점심을 끼우면 10시 전후 출발이 한계이고, 스루는 12시 15분 전후까지 가능합니다.</p>
+
+  <figure class="chart" style="margin-inline:0">
+    <p class="chart-title">라운드 타임라인 · A안</p>
+    <p class="chart-sub">일출·일몰은 일본 국립천문대 기준입니다.<span class="screen-only"> 막대에 마우스를 올리거나 탭하면 시각이 나옵니다.</span></p>
+    <ul class="legend">
+      <li><i style="background:var(--accent)"></i>플레이 (OUT · IN)</li>
+      <li><i style="background:var(--gold)"></i>점심 휴식</li>
+      <li><i style="background:var(--mark-neutral)"></i>이동 · 준비 · 목욕</li>
+      <li><i class="night"></i>해 뜨기 전 · 해 진 뒤</li>
+    </ul>
+    <div class="tl" id="tl" role="group" aria-label="1~3일차 라운드 타임라인, 06시부터 18시까지"></div>
+  </figure>
+</section>
+
+<!-- ===== DAY 1 ===== -->
+<section id="day1">
+  <p class="kicker">A안 · Day 1 · 11.20 Fri</p>
+  <h2>도착하자마자 오후 스루 라운드</h2>
+  <p class="daymeta"><span>골프: 치쿠시가오카 GC 11:22</span><span>저녁: 모츠나베</span><span>밤: 나카스 야타이</span></p>
+  <ol class="sched">
+    <li><time>06:30</time><div><span class="tag">이동</span><span class="what">인천 출발 → 후쿠오카 08:00 전후 도착</span><p>11:22 티오프를 맞추려면 08:30 전에 내리는 비행기를 타야 합니다. 아시아나 06:00, 제주항공 06:30, 진에어 06:55 출발편이 해당됩니다(<a href="#flights">항공권</a> 참고). 김해 07:00 → 08:01 편도 됩니다.</p></div></li>
+    <li><time>08:00</time><div><span class="tag">이동</span><span class="what">입국 심사 · 골프백 수령</span><p>Visit Japan Web QR을 미리 만들어 두면 빨라집니다. 골프백은 대형 수하물 벨트로 나옵니다. 아침에는 심사 대기가 30~60분 걸리기도 합니다.</p></div></li>
+    <li><time>09:00</time><div><span class="tag">이동</span><span class="what">렌터카 인수 (국제선 1층 카운터)</span><p>도요타는 1층 공동 카운터에서 셔틀로 약 3분 거리이고 8:00~20:00 영업입니다. 운전할 사람 전원이 국제운전면허증(종이), 한국 면허증, 여권을 챙기고, ETC 카드(¥330)도 함께 빌리세요.</p></div></li>
+    <li><time>09:40</time><div><span class="tag">이동</span><span class="what">공항 → 치쿠시가오카 GC</span><p>스루 플레이라 점심시간이 따로 없습니다. 가는 길에 편의점에서 주먹밥이나 샌드위치를 사 두세요.</p></div></li>
+    <li><time>10:20</time><div><span class="tag see">준비</span><span class="what">체크인 · 클럽하우스에서 이른 식사 · 퍼팅 연습</span></div></li>
+    <li><time>11:22</time><div><span class="tag golf">골프</span><span class="what">티오프 · 18홀 스루 플레이</span><p>전반을 마치고 찻집에서 10분쯤 쉰 뒤 바로 후반에 나갑니다. 15:55 전후에 끝나서 일몰(17:13)까지 1시간 넘게 남습니다.</p></div></li>
+    <li><time>15:55</time><div><span class="tag see">휴식</span><span class="what">목욕 · 정산</span></div></li>
+    <li><time>16:35</time><div><span class="tag">이동</span><span class="what">하카타 호텔 체크인 · 차는 호텔 주차장에</span><p>오늘 운전은 여기까지라 저녁에는 모두 마셔도 됩니다.</p></div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">저녁: 모츠나베</span><p><b>모츠나베 야마나카 하카타점</b> (TableCheck, 1인분 ¥2,480, 코스 ¥4,980) 또는 <b>마에다야 총본점</b> (핫페퍼, 한국어 메뉴·개별실, 코스 ¥5,280~). 마무리는 짬뽕면입니다.</p></div></li>
+    <li><time>20:30</time><div><span class="tag see">관광</span><span class="what">나카스 강변 야타이 거리 · 캐널시티</span><p>강변 야타이 불빛을 따라 걷다가 한 곳에서 한잔합니다 (현금, 1인 1메뉴, 1시간 정도). 걸어서 갈 수 있는 캐널시티에는 분수 쇼와 2026년 4월에 새로 연 라멘 스타디움이 있습니다. 금요일엔 야타이 대부분이 영업합니다.</p></div></li>
+  </ol>
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--accent)"/><path d="M10 9v5.2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="5.9" r="1.15" fill="#fff"/></svg>
+    <div>
+      <p><span class="lbl">더 클래식으로 바꾸면</span>인천 07:15 출발(08:45 도착) 편도 괜찮습니다. 12:08 티오프, 16:50 전후 종료, 18:15쯤 호텔 도착, 19:00 저녁입니다.</p>
+      <p><span class="lbl">첫 비행기를 놓치면</span>골프장에 바로 전화해 늦은 출발로 바꿀 수 있는지 묻고, 안 되면 첫날 라운드를 빼고 캐널시티와 텐진을 둘러봅니다. 치쿠시가오카는 7일 전부터 취소료가 붙습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DAY 2 ===== -->
+<section id="day2">
+  <p class="kicker">A안 · Day 2 · 11.21 Sat</p>
+  <h2>아침 라운드, 오후는 온천과 이자카야</h2>
+  <p class="daymeta"><span>골프: 후쿠오카 국제 CC 08:28</span><span>오후: 온천 · 쇼핑 · 스모</span><span>저녁: 야키토리 · 야타이</span></p>
+  <ol class="sched">
+    <li><time>06:15</time><div><span class="tag food">식사</span><span class="what">아침: 호텔 조식 또는 편의점</span><p>호텔 조식 시작 시각을 미리 확인하세요. 6시 반 이후에 여는 곳이 많습니다.</p></div></li>
+    <li><time>06:50</time><div><span class="tag">이동</span><span class="what">호텔 → 도시고속 → 규슈도 와카미야 IC</span><p>35~45분 걸리고 통행료는 편도 약 ¥1,420입니다.</p></div></li>
+    <li><time>07:40</time><div><span class="tag see">준비</span><span class="what">체크인 · 퍼팅 연습</span><p>드라이빙 레인지는 휴장 중이라 스트레칭과 퍼팅으로 몸을 풉니다.</p></div></li>
+    <li><time>08:28</time><div><span class="tag golf">골프</span><span class="what">티오프 · 전반 9홀</span></div></li>
+    <li><time>10:43</time><div><span class="tag food">식사</span><span class="what">클럽하우스 점심</span><p>후반 출발 시각은 들어올 때 마스터 실에서 정해 주고, 보통 50~65분 뒤입니다. 운전 당번은 무알코올 맥주로 대신합니다.</p></div></li>
+    <li><time>11:50</time><div><span class="tag golf">골프</span><span class="what">후반 9홀 → 14:05 전후 종료</span></div></li>
+    <li><time>14:05</time><div><span class="tag see">휴식</span><span class="what">목욕 (락커·목욕 ¥440)</span></div></li>
+    <li><time>14:40</time><div><span class="tag">이동</span><span class="what">하카타로 복귀 (15:25 전후 도착)</span></div></li>
+    <li><time>15:30</time><div><span class="tag see">관광</span><span class="what">오후는 셋 중 하나를 고르세요</span>
+      <ul class="plain">
+        <li><b>온천:</b> 돌아오는 길의 베이사이드 플레이스 <b>미나토 온천 나미하노유</b> (주말 ¥1,250, 10:00~23:00, 4시간 무료 주차). 호텔 대욕장으로 대신해도 됩니다. 사우나파라면 기온의 <b>웰비 후쿠오카</b> (주말 2시간 ¥2,500).</li>
+        <li><b>쇼핑:</b> 텐진 ONE FUKUOKA BLDG. (2025년 개장, 약 130개 매장), 이와타야·다이마루·파르코, 하카타역 아뮤플라자·한큐. 실물 크기 건담이 있는 라라포트 후쿠오카도 차로 15분 안팎입니다.</li>
+        <li><b>스모 관전:</b> 규슈 바쇼 14일째입니다. 마쿠우치 입장 의식이 15:40 전후, 본경기는 16:00~18:00입니다. 정가 티켓은 매진이라 공식 리세일(定価リセール)로만 구할 수 있고, 주말 정가는 의자석 ¥2,500~6,000입니다.</li>
+      </ul>
+    </div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">저녁: 하카타식 야키토리 또는 한입 교자</span><p><b>하치베 가미닌바시도리점</b> (핫페퍼, ¥5,000~8,000에 오토시 ¥650) 또는 <b>호운테이 나카스 본점</b> (1949년 원조 한입 교자, TableCheck, 8개 ¥550).</p></div></li>
+    <li><time>21:00</time><div><span class="tag see">관광</span><span class="what">야타이 2차 → 라멘으로 마무리</span><p>토요일도 야타이 대부분이 영업합니다. 라멘은 <b>이치란 본사총본점</b> (24시간)이나 <b>신신 텐진 본점</b> (새벽 3시까지).</p></div></li>
+  </ol>
+</section>
+
+<!-- ===== DAY 3 ===== -->
+<section id="day3">
+  <p class="kicker">A안 · Day 3 · 11.22 Sun</p>
+  <h2>명문 라운드, 그리고 회식</h2>
+  <p class="daymeta"><span>골프: 아소 이이즈카 GC 08:35~08:56</span><span>저녁: 회식</span></p>
+  <ol class="sched">
+    <li><time>06:30</time><div><span class="tag food">식사</span><span class="what">아침</span></div></li>
+    <li><time>07:05</time><div><span class="tag">이동</span><span class="what">호텔 → 아소 이이즈카 GC (40~50분)</span><p>재킷(블레이저)을 입고 출발합니다. 셔츠는 바지 안에 넣고, 청바지·티셔츠·샌들은 안 됩니다.</p></div></li>
+    <li><time>07:50</time><div><span class="tag see">준비</span><span class="what">체크인 · 연습</span></div></li>
+    <li><time>08:42</time><div><span class="tag golf">골프</span><span class="what">티오프 · 전반 9홀</span><p>캐디를 원하면 예약할 때 요청하세요 (1인 +¥2,000). 그린이 까다로운 코스라 라인 읽기에 도움이 됩니다.</p></div></li>
+    <li><time>10:57</time><div><span class="tag food">식사</span><span class="what">클럽하우스 점심</span></div></li>
+    <li><time>12:00</time><div><span class="tag golf">골프</span><span class="what">후반 9홀 → 14:15 전후 종료</span></div></li>
+    <li><time>14:15</time><div><span class="tag see">휴식</span><span class="what">목욕 · 재킷 차림으로 퇴장</span></div></li>
+    <li><time>14:50</time><div><span class="tag">이동</span><span class="what">하카타 복귀 (15:40 전후) · 차는 호텔에 두기</span></div></li>
+    <li><time>16:00</time><div><span class="tag see">휴식</span><span class="what">낮잠 · 하카타역 주변 산책</span><p>하카타역 크리스마스 마켓은 예년에 11월 초에 열었습니다. 올해 일정은 아직 발표되지 않았습니다.</p></div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">회식</span><p><b>가와타로 나카스 본점</b>: 요부코산 활오징어 코스 ¥7,700 또는 ¥11,000 (+10%). 일·공휴일 17:00~21:30 영업, 한국어 메뉴, 온라인 예약 가능. 고기파라면 <b>야키니쿠 게이슈 하루요시점</b>: 강변 전망에 개별실 7개, 새벽 4시까지, 1인 ¥5,000~6,000 이상.</p></div></li>
+    <li><time>21:00</time><div><span class="tag see">관광</span><span class="what">2차: 나카스 강변 산책과 바</span><p>호객꾼은 무시하고, 들어가기 전에 세트 요금·테이블 차지·세금을 합친 총액을 확인하세요.</p></div></li>
+  </ol>
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 19.2 18H.8Z" fill="#fab219"/><path d="M10 7.6v5" stroke="#1a1a19" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="15.1" r="1.15" fill="#1a1a19"/></svg>
+    <div><p><span class="lbl">일요일에 쉬는 곳</span>미즈타키 나가노, 신미우라, 신히데 본점, 아사히켄 역전 본점, 하카타 기온 테츠나베, 그리고 야타이 상당수가 일요일에 쉽니다. 회식 장소는 일요일 영업이 확인된 곳으로 골랐습니다.</p></div>
+  </div>
+</section>
+
+<!-- ===== DAY 4 ===== -->
+<section id="day4">
+  <p class="kicker">A안 · Day 4 · 11.23 Mon · 일본 공휴일</p>
+  <h2>아침 먹고 공항으로</h2>
+  <p class="sub">연휴 마지막 날이라 공항이 붐빕니다. 렌터카는 비행기 출발 3시간 전에 반납하는 것으로 계산했습니다.</p>
+
+  <h3>오전 비행기 (11:00~13:00 출발)</h3>
+  <ol class="sched">
+    <li><time>07:00</time><div><span class="tag food">식사</span><span class="what">아침: 간소 하카타 멘타이주 (나카스)</span><p>명란 한 줄을 통째로 올린 덮밥으로 ¥1,980입니다. 7:00에 열고, 7:30~8:30은 EPARK 온라인 예약을 받습니다 (전화 예약 불가). 그 외 시간은 번호표를 받습니다.</p></div></li>
+    <li><time>08:00</time><div><span class="tag">이동</span><span class="what">체크아웃 · 공항 근처 셀프 주유소에서 가득 주유</span><p>주유소에서는 "레귤러 만탄(レギュラー満タン)"이라고 말하면 됩니다.</p></div></li>
+    <li><time>08:30</time><div><span class="tag">이동</span><span class="what">렌터카 반납 → 셔틀로 국제선 터미널</span></div></li>
+    <li><time>09:00</time><div><span class="tag see">준비</span><span class="what">체크인 · 골프백은 대형 수하물 카운터 · 출국</span></div></li>
+  </ol>
+
+  <h3>오후 비행기 (15:00 이후 출발)</h3>
+  <ol class="sched">
+    <li><time>07:30</time><div><span class="tag food">식사</span><span class="what">아침: 멘타이주 또는 호텔 조식</span></div></li>
+    <li><time>08:30</time><div><span class="tag see">관광</span><span class="what">체크아웃 → 다자이후 텐만구 (차로 25~30분)</span><p>대수리를 마친 본전이 2026년 9월에 다시 열렸고, 단풍은 예년 11월 하순에 절정입니다. 공휴일이라 10시 전에 도착해야 덜 붐빕니다.</p></div></li>
+    <li><time>10:40</time><div><span class="tag food">식사</span><span class="what">이른 점심: 공항 근처</span><p><b>덴푸라 히라오 본점</b> (10:30 오픈, 주차장 있음, 현금만) 또는 <b>마키노 우동 공항점</b> (10:00~23:00, 40대 주차).</p></div></li>
+    <li><time>12:00</time><div><span class="tag">이동</span><span class="what">주유 → 렌터카 반납 → 국제선 터미널</span></div></li>
+  </ol>
+</section>
+
+<!-- ===== PLAN B ===== -->
+<section id="planb">
+  <p class="kicker">B안 · 11.19 Thu → 11.22 Sun</p>
+  <h2>B안 일정: 목요일 출발, 일요일 귀국</h2>
+  <p class="sub">코스 세 곳과 식당은 A안과 같고 요일과 순서만 바뀝니다. A안과 같은 부분은 짧게 적었으니 자세한 설명은 A안 일정을 참고하세요.</p>
+
+  <div class="tbl-wrap scorecard">
+    <table>
+      <caption class="sr-only">B안 라운드별 코스, 방식, 티오프, 종료 시각, 요금 요약</caption>
+      <thead>
+        <tr><th scope="col">B안</th><th scope="col">1R · 11/19 목</th><th scope="col">2R · 11/20 금</th><th scope="col">3R · 11/21 토</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">코스</th><td><b>치쿠시가오카 GC</b><span class="jp">筑紫ヶ丘</span></td><td><b>아소 이이즈카 GC</b><span class="jp">麻生飯塚 · 명문</span></td><td><b>후쿠오카 국제 CC</b><span class="jp">福岡国際</span></td></tr>
+        <tr><th scope="row">방식</th><td>스루 (점심 없음)</td><td>전반 → 점심 → 후반</td><td>전반 → 점심 → 후반</td></tr>
+        <tr><th scope="row">티오프</th><td class="mono">11:22</td><td class="mono">08:40 전후</td><td class="mono">08:28</td></tr>
+        <tr><th scope="row">종료 예상</th><td class="mono">15:55</td><td class="mono">14:15</td><td class="mono">14:05</td></tr>
+        <tr><th scope="row">이동</th><td>공항에서 25~40분</td><td>하카타에서 40~50분</td><td>하카타에서 35~45분</td></tr>
+        <tr><th scope="row">1인 요금</th><td class="mono">¥15,000</td><td class="mono">¥14,000</td><td class="mono">¥22,400</td></tr>
+        <tr><th scope="row">라운드 후</th><td>모츠나베 · 야타이</td><td>온천 · 쇼핑 · 이자카야</td><td>회식</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">목요일 치쿠시가오카 11:22와 토요일 후쿠오카 국제 08:28은 9월 28일에 비어 있던 시간입니다. 금요일 아소 이이즈카는 평일이라 8시대 출발을 잡기 쉬운 편이지만 예약할 때 확인하세요.</p>
+
+  <figure class="chart" style="margin-inline:0">
+    <p class="chart-title">라운드 타임라인 · B안</p>
+    <p class="chart-sub">일출·일몰과 색 구분은 A안 차트와 같습니다.</p>
+    <ul class="legend">
+      <li><i style="background:var(--accent)"></i>플레이 (OUT · IN)</li>
+      <li><i style="background:var(--gold)"></i>점심 휴식</li>
+      <li><i style="background:var(--mark-neutral)"></i>이동 · 준비 · 목욕</li>
+      <li><i class="night"></i>해 뜨기 전 · 해 진 뒤</li>
+    </ul>
+    <div class="tl" id="tl-b" role="group" aria-label="B안 1~3일차 라운드 타임라인, 06시부터 18시까지"></div>
+  </figure>
+
+  <h3>1일차 · 11/19 목 · 도착 후 스루 라운드</h3>
+  <ol class="sched">
+    <li><time>06:30</time><div><span class="tag">이동</span><span class="what">인천 출발 → 후쿠오카 08:00 전후 도착 → 렌터카 인수</span><p>A안 1일차와 같은 흐름입니다. 08:30 전에 내리는 비행기를 타세요.</p></div></li>
+    <li><time>11:22</time><div><span class="tag golf">골프</span><span class="what">치쿠시가오카 18홀 스루 → 15:55 전후 종료</span><p>목요일도 스루 ¥15,000이고, 10:50~11:22 출발이 비어 있었습니다.</p></div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">저녁: 모츠나베 (야마나카 또는 마에다야)</span></div></li>
+    <li><time>20:30</time><div><span class="tag see">관광</span><span class="what">나카스 강변 야타이 · 캐널시티</span><p>목요일에 쉬는 야타이도 있으니(예: 야키라멘 고가네짱) 불 켜진 곳 위주로 둘러보세요.</p></div></li>
+  </ol>
+
+  <h3>2일차 · 11/20 금 · 명문 라운드와 오후 온천</h3>
+  <ol class="sched">
+    <li><time>07:05</time><div><span class="tag">이동</span><span class="what">호텔 → 아소 이이즈카 GC (40~50분)</span><p>재킷(블레이저)을 입고 출발합니다. 입국 다음 날이라 입국 당일 플레이 금지 규정에 걸리지 않습니다.</p></div></li>
+    <li><time>08:40</time><div><span class="tag golf">골프</span><span class="what">티오프 · 전반 9홀</span><p>평일 셀프 ¥14,000, 캐디를 붙이면 ¥16,000입니다. A안의 일요일보다 1인 ¥8,000 쌉니다.</p></div></li>
+    <li><time>10:55</time><div><span class="tag food">식사</span><span class="what">클럽하우스 점심</span></div></li>
+    <li><time>12:00</time><div><span class="tag golf">골프</span><span class="what">후반 9홀 → 14:15 전후 종료 · 목욕</span></div></li>
+    <li><time>15:40</time><div><span class="tag see">관광</span><span class="what">오후: 온천 · 쇼핑 · 스모 중 하나</span><p>A안 2일차의 오후 선택지를 그대로 쓰면 됩니다. 스모는 규슈 바쇼 13일째이고, 정가 티켓이 매진이라 공식 리세일로만 구할 수 있습니다.</p></div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">저녁: 하카타식 야키토리 또는 한입 교자 → 야타이</span><p>하치베 가미닌바시도리점이나 호운테이 나카스 본점. 금요일이라 야타이 대부분이 영업합니다.</p></div></li>
+  </ol>
+
+  <h3>3일차 · 11/21 토 · 아침 라운드와 회식</h3>
+  <ol class="sched">
+    <li><time>06:50</time><div><span class="tag">이동</span><span class="what">호텔 → 후쿠오카 국제 CC (와카미야 IC, 통행료 편도 약 ¥1,420)</span></div></li>
+    <li><time>08:28</time><div><span class="tag golf">골프</span><span class="what">티오프 → 10:43 점심 → 11:50 후반 → 14:05 전후 종료</span><p>토요일 요금 ¥22,400에 락커·목욕 ¥440이 따로 붙습니다. 연습장은 휴장 중입니다.</p></div></li>
+    <li><time>15:25</time><div><span class="tag see">휴식</span><span class="what">하카타 복귀 · 휴식과 쇼핑</span></div></li>
+    <li><time>18:30</time><div><span class="tag food">식사</span><span class="what">회식</span><p>토요일이라 A안에서는 일요일 휴무로 못 가던 곳도 갈 수 있습니다. 활오징어 <b>가와타로 나카스 본점</b>(월~토 17:30~22:00), 닭 전골 <b>미즈타키 나가노</b>(한 달 전 전화 예약), 개별실 야키니쿠 <b>게이슈 하루요시점</b> 중에서 고르세요.</p></div></li>
+    <li><time>21:00</time><div><span class="tag see">관광</span><span class="what">2차: 야타이 또는 나카스 강변 산책</span><p>토요일엔 야타이 대부분이 영업합니다.</p></div></li>
+  </ol>
+
+  <h3>4일차 · 11/22 일 · 귀국</h3>
+  <ol class="sched">
+    <li><time>07:00</time><div><span class="tag food">식사</span><span class="what">아침: 간소 하카타 멘타이주 또는 호텔 조식</span></div></li>
+    <li><time>08:00</time><div><span class="tag">이동</span><span class="what">체크아웃 → 주유 → 비행기 3시간 전 렌터카 반납</span><p>오후 비행기라면 A안 4일차처럼 다자이후 텐만구와 공항 근처 점심(히라오, 마키노 우동)을 넣을 수 있습니다. 일요일이라 다자이후에는 10시 전에 도착하세요.</p></div></li>
+  </ol>
+</section>
+
+<!-- ===== TRANSPORT ===== -->
+<section id="transport">
+  <p class="kicker">Transport</p>
+  <h2>교통비 비교: 렌터카가 택시의 절반 이하</h2>
+  <p class="sub">4명, 골프백 4개, 캐리어 4개 기준입니다. 3라운드 왕복, 첫날 공항→골프장, 마지막 날 호텔→공항까지 합친 금액이고, 환율은 2026년 9월 평균인 100엔 = 870원으로 계산했습니다.</p>
+
+  <div class="costlist" role="list" aria-label="이동 방식별 비용 비교">
+    <div class="cost-scale" aria-hidden="true">
+      <p class="cost-scale-title">1인 금액 (엔)</p>
+      <div class="scale"><span style="left:0">0</span><span style="left:25%">2만</span><span style="left:50%">4만</span><span style="left:75%">6만</span><span style="left:100%">8만</span></div>
+    </div>
+    <div class="opt-row" role="listitem">
+      <div class="opt-top">
+        <div class="opt-name"><b>A. 렌터카 (노아·복시급)</b><span class="pick">추천</span><span class="opt-desc">차량, 보험, ETC, 기름, 통행료, 호텔 주차 3박</span></div>
+        <div class="opt-num"><span class="pp">1인 ¥14,600~21,400</span><span class="tot">약 13만~19만 원 · 4인 ¥58,500~85,400</span></div>
+      </div>
+      <div class="range rec" data-lo="14600" data-hi="21400" tabindex="0" aria-label="A 렌터카 내역" data-tip-value="1인 ¥14,600~21,400" data-tip-label="4인 합계: 차량 ¥40,000~60,500 + 보험 ¥2,200~6,600 + ETC ¥330 + 기름 약 ¥4,000 + 통행료 ¥6,000~8,000 + 주차 ¥6,000"></div>
+      <p class="range-note print-only">4인 합계: 차량 ¥40,000~60,500 + 보험 ¥2,200~6,600 + ETC ¥330 + 기름 약 ¥4,000 + 통행료 ¥6,000~8,000 + 주차 ¥6,000</p>
+    </div>
+    <div class="opt-row na" role="listitem">
+      <div class="opt-top">
+        <div class="opt-name"><b>B. 클럽버스 + 전철 + 택시</b><span class="opt-desc">추천 코스 3곳 모두 클럽버스가 없습니다 (GORA 안내). 버스가 있는 코스로 바꾸면 선택지가 크게 줄어듭니다.</span></div>
+        <div class="opt-num"><span class="pp">해당 없음</span></div>
+      </div>
+    </div>
+    <div class="opt-row" role="listitem">
+      <div class="opt-top">
+        <div class="opt-name"><b>C. 택시 (MK 골프 정액 점보)</b><span class="opt-desc">하루 ¥57,320 × 3일 (10시간 이내 왕복), 통행료, 마지막 날 공항</span></div>
+        <div class="opt-num"><span class="pp">1인 약 ¥45,900</span><span class="tot">약 40만 원 · 4인 약 ¥183,000</span></div>
+      </div>
+      <div class="range" data-lo="45900" data-hi="45900" tabindex="0" aria-label="C 택시 내역" data-tip-value="1인 약 ¥45,900" data-tip-label="4인 합계: ¥57,320 × 3일 + 통행료 약 ¥7,000 + 4일차 공항 점보택시 약 ¥4,500"></div>
+      <p class="range-note print-only">4인 합계: ¥57,320 × 3일 + 통행료 약 ¥7,000 + 4일차 공항 점보택시 약 ¥4,500</p>
+    </div>
+    <div class="opt-row" role="listitem">
+      <div class="opt-top">
+        <div class="opt-name"><b>D. 기사 포함 전세 밴 (MK 점보 시간제)</b><span class="opt-desc">8시간 ¥73,760 + 30분당 ¥4,110. 한국어 기사 지정 가능</span></div>
+        <div class="opt-num"><span class="pp">1인 ¥64,000~78,000</span><span class="tot">약 56만~68만 원 · 4인 ¥257,000~312,000</span></div>
+      </div>
+      <div class="range" data-lo="64000" data-hi="78000" tabindex="0" aria-label="D 전세 밴 내역" data-tip-value="1인 ¥64,000~78,000" data-tip-label="4인 합계: 하루 9~10시간 ¥82,000~90,200 × 3일 + 통행료·공항 이동 + 외국어 기사 요금(붙는 경우)"></div>
+      <p class="range-note print-only">4인 합계: 하루 9~10시간 ¥82,000~90,200 × 3일 + 통행료·공항 이동 + 외국어 기사 요금(붙는 경우)</p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">막대의 진한 부분은 최저 금액, 옅은 부분은 최고 금액까지의 범위입니다.<span class="screen-only"> 막대에 마우스를 올리거나 탭하면 내역이 나옵니다.</span> B안도 대여 기간이 같아서 교통비는 거의 같습니다.</p>
+
+  <h3>추천: A. 렌터카 + 운전 당번</h3>
+  <ul class="plain">
+    <li>가장 싸고, 첫날 공항에서 골프백을 싣고 바로 골프장으로 갈 수 있습니다. 2일차 온천이나 4일차 다자이후처럼 동선도 자유롭습니다.</li>
+    <li><b>차종:</b> 도요타 노아·복시급(폭 1.73m)입니다. 3열을 접으면 4명과 골프백 4개가 들어가는데, 캐리어까지 실으면 꽉 차니 캐리어는 기내용 크기로 맞추세요. 알파드(폭 1.85m)는 호텔 주차장 폭 제한(1.80~1.83m)에 걸리는 곳이 많고, 10인승 하이에이스는 국제운전면허 D종이 필요한 데다 호텔 주차가 거의 안 됩니다.</li>
+    <li><b>가격:</b> 도요타 정가 기준 노아급을 금요일 오전부터 월요일 낮까지(72~76시간) 빌리면 ¥51,700~60,500이고, 면책·NOC 보상이 약 ¥6,600입니다. 자란이나 토쿠(tocoo) 같은 비교 사이트에서는 하루 ¥9,100~16,400부터 나오지만 연휴라 오를 수 있습니다.</li>
+    <li><b>운전 당번:</b> 일본 음주운전 기준은 호흡 0.15mg/L이고, 차를 빌려준 사람, 술을 준 사람, 알고 탄 동승자도 처벌받습니다. 운전자는 한 모금도 마시지 않는 게 원칙입니다. 라운드마다 당번을 바꾸세요.</li>
+    <li><b>모두 마시고 싶은 날:</b> 그날만 MK 골프 정액 점보(¥57,320, 1인 약 ¥14,300)를 부르거나, 골프장 프런트에 대리운전(代行)을 부탁합니다. 대행 요금은 30km에 ¥8,000~15,000 정도로 알려져 있는데 확인은 못 했습니다. 렌터카 약관이 대행을 허용하는지도 확인하세요.</li>
+    <li><b>기름과 통행료:</b> 레귤러 휘발유는 L당 ¥169 (9/14 조사)입니다. 후쿠오카 도시고속은 ¥630 균일(ETC ¥560~630)이고, 하카타→와카미야 IC가 편도 약 ¥1,420입니다. 전체 통행료는 ¥6,000~8,000으로 잡았습니다.</li>
+  </ul>
+
+  <h3>렌터카 업체 3곳: 공항 동선이 짧은 순</h3>
+  <p class="sub">세 곳 모두 국제선 터미널 1층에 카운터가 있어, 입국장에서 나와 바로 수속합니다. 대여 기간이 같아서 A안과 B안 요금은 같습니다(첫날 오전 인수, 마지막 날 낮 반납, 약 72~75시간).</p>
+  <div class="tbl-wrap">
+    <table class="tiers">
+      <caption class="sr-only">렌터카 업체 세 곳의 공항 이동, 차종, 예상 요금 비교</caption>
+      <thead><tr><th scope="col">업체</th><th scope="col">공항에서</th><th scope="col">차종</th><th scope="col" class="num">3박 4일 예상<span class="p">1대 · 보험 포함</span></th><th scope="col">메모</th></tr></thead>
+      <tbody>
+        <tr><td><b>도요타 렌터카</b><span class="p">후쿠오카 INTERNATIONAL점</span></td><td>1층 렌터카 공동 안내소 → 무료 셔틀 약 3분</td><td>노아·복시 (W2)</td><td class="num">약 ¥58,000~65,000<span class="p">1인 약 ¥15,000~16,000</span></td><td>정가 기준. 8:00~20:00 영업. 차량 상태와 영업소 규모가 안정적</td></tr>
+        <tr><td><b>스카이 렌터카</b></td><td>1층 카운터 → 무료 셔틀 약 5분</td><td>노아·세레나·스텝왜건</td><td class="num">약 ¥27,000~36,000<span class="p">1인 약 ¥7,000~9,000</span></td><td>비교 사이트 기준 1일 ¥9,100부터(보험 포함). 가장 쌈. 연휴라 오를 수 있음</td></tr>
+        <tr><td><b>버젯 렌터카</b></td><td>1층 카운터 → 도보 약 5분</td><td>노아·세레나·델리카</td><td class="num">약 ¥40,000~53,000<span class="p">1인 약 ¥10,000~13,000</span></td><td>자란 기준 24시간 ¥11,000부터 + 면책 약 ¥2,200/일</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">도요타는 공식 요금표, 스카이와 버젯은 9월 말 비교 사이트(jcation, 자란) 최저가 기준이라 실제 날짜 요금은 예약 화면에서 확인하세요. 타임즈는 영업소가 1.5km 떨어져 셔틀이 약 15분 걸려서 뺐습니다. 기름값·통행료·주차비는 위 교통비 비교에 들어 있습니다.</p>
+
+  <h3>나머지 방식의 함정</h3>
+  <ul class="plain">
+    <li><b>셔틀:</b> 셔틀이 있는 코스로 짜면 코스 선택지가 크게 줄고, 골프백을 들고 전철을 타야 합니다. 야마토 골프 택배(규슈 내 1개 ¥3,020)는 플레이 2일 전까지 보내야 해서 연속 라운드에는 맞지 않습니다.</li>
+    <li><b>택시:</b> 일반 세단에는 골프백이 2~3개만 들어가서 2대가 필요합니다. 미터 요금은 하카타에서 40km 코스까지 세단 약 ¥13,700, 점보 약 ¥25,900 (편도, 통행료 별도)이고, 돌아올 때 픽업이 보장되지 않습니다. MK 골프 정액은 전날 취소하면 50%를 냅니다.</li>
+    <li><b>전세 밴:</b> 가장 편하지만 가장 비쌉니다. 녹색 번호판 영업 차량만 이용하세요. 흰색 번호판 자가용으로 돈 받고 태우는 영업은 불법입니다.</li>
+  </ul>
+</section>
+
+<!-- ===== STAY ===== -->
+<section id="stay">
+  <p class="kicker">Stay · 3 nights</p>
+  <h2>숙소: 새벽 출차 되는 주차장과 대욕장</h2>
+  <p class="sub">골프 여행 숙소에서는 세 가지를 봅니다. 새벽 6시대에 차를 뺄 수 있는지, 미니밴이 들어가는 크기인지, 라운드 뒤 몸을 풀 대욕장이 있는지입니다. 하카타역~나카스~기온 사이가 고속도로 타기도 쉽고 저녁 동선도 편합니다.</p>
+
+  <div class="notice" role="note">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 19.2 18H.8Z" fill="#fab219"/><path d="M10 7.6v5" stroke="#1a1a19" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="15.1" r="1.15" fill="#1a1a19"/></svg>
+    <div><p><span class="lbl">주의: 3박 연속으로 남은 호텔이 적습니다.</span>9월 28일 라쿠텐에서 토요일을 포함한 3박으로 조회하면 크룸 하카타, 크룸 기온, 도미인 PREMIUM, 컴포트 하카타, 닛코, 미야코, 워싱턴 호텔이 모두 만실이었습니다. 트윈은 대부분 매진이고 더블이나 비싼 객실만 남아 있습니다. 공식 사이트, 자란, 아고다도 함께 확인하세요.</p></div>
+  </div>
+
+  <h3>호텔 4곳: 3박 연속 예약 가능 · 미니밴 주차 가능</h3>
+  <div class="tbl-wrap">
+    <table class="tiers">
+      <caption class="sr-only">가격대별 호텔 네 곳의 A안과 B안 3박 요금, 주차, 특징</caption>
+      <thead><tr><th scope="col">가격대 · 호텔</th><th scope="col" class="num">A안 3박<span class="p">11/20~23 · 1실</span></th><th scope="col" class="num">B안 3박<span class="p">11/19~22 · 1실</span></th><th scope="col">주차</th><th scope="col">특징</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tier">저가</span><b>아파 호텔 &amp; 리조트 하카타역 동쪽</b><span class="p">스탠다드 더블 (트윈 매진) · 조식 제외</span></td><td class="num">¥86,734<span class="p">1인 ¥43,367</span></td><td class="num">¥77,290<span class="p">1인 ¥38,645</span></td><td>11대, ¥1,500/박, 선착순 (예약 불가). 크기 제한 표기 없음</td><td>최상층 대욕장·노천탕. 하카타역 도보 2~4분. 더블 침대 하나를 둘이 씀</td></tr>
+        <tr><td><span class="tier">중가</span><b>칸데오 호텔 후쿠오카 텐진</b><span class="p">이그제큐티브 소파 더블 15㎡ · 조식 제외</span></td><td class="num">¥124,700<span class="p">1인 ¥62,350</span></td><td class="num">¥115,700<span class="p">1인 ¥57,850</span></td><td>야외 7대, ¥2,000/박, 전화 예약</td><td>옥상 노천탕과 90℃ 사우나. 텐진 중심</td></tr>
+        <tr><td><span class="tier">중상</span><b>더 루이간스 스파 &amp; 리조트</b><span class="p">4인 1실 · 시사이드 스위트 49㎡ (글램핑 구역) · 조식 제외</span></td><td class="num">¥315,560<span class="p">1인 ¥78,890</span></td><td class="num">¥266,800<span class="p">1인 ¥66,700 · 1실 남음</span></td><td>무료</td><td>바닷가 리조트(히가시구 아일랜드시티). 하카타까지 차로 20~25분. 넷이 한 방</td></tr>
+        <tr><td><span class="tier">고가</span><b>힐튼 후쿠오카 시호크</b><span class="p">A안 이그제큐티브 트윈 조식 포함 · B안 더블 조식 제외 (트윈 매진)</span></td><td class="num">¥218,414<span class="p">1인 ¥109,207</span></td><td class="num">¥142,550<span class="p">1인 ¥71,275</span></td><td>800대, ¥2,000/박, 예약 불필요</td><td>모모치 해변, 공항까지 약 20분. 나카스는 택시. 11/23 옆 페이페이돔 특별 경기로 혼잡</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">9월 28일 라쿠텐 트래블 3박 연속 조회 요금이고, 1인 금액은 2인 1실(루이간스는 4인 1실) 기준입니다. 호텔 주차장은 크기 제한이 따로 적혀 있지 않은 곳이라도 예약할 때 "노아급 미니밴"이라고 알려 두세요.</p>
+  <ul class="plain">
+    <li><b>더 로열파크 캔버스 후쿠오카 나카스:</b> 제휴 주차장이 23:00~7:00에 입출차 불가라 새벽 출발이 안 됩니다.</li>
+    <li><b>미쓰이 가든 호텔 후쿠오카 나카스:</b> 주차 입고가 8:00~22:00이고 미니밴 가능 칸이 2개뿐입니다.</li>
+    <li><b>미야코 호텔 하카타:</b> 타워 주차장은 7:00~23:00만 운영합니다. 24시간 제휴 주차장(¥1,500)을 쓰면 가능합니다.</li>
+    <li><b>도큐스테이 하카타, 호텔 포르차 하카타구치:</b> 주차장이 없습니다. <b>도미인 하카타 기온</b>은 자체 주차장 높이가 1.55m라 미니밴이 못 들어갑니다.</li>
+  </ul>
+
+  <h3>에어비앤비 4곳: 무료 주차 포함 · 4인 숙소 전체</h3>
+  <div class="tbl-wrap">
+    <table class="tiers">
+      <caption class="sr-only">가격대별 에어비앤비 네 곳의 A안과 B안 총액과 주차 조건</caption>
+      <thead><tr><th scope="col">가격대 · 숙소</th><th scope="col" class="num">A안 총액<span class="p">4인 3박</span></th><th scope="col" class="num">B안 총액<span class="p">4인 3박</span></th><th scope="col">주차</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tier">저가</span><b><a href="https://www.airbnb.co.kr/rooms/1222851128425026738">P205 아파트</a></b><span class="p">미나미구, 이지리역 도보 5분 · 방 2, 침대 4, 욕실 1 · 최대 4명 · 평점 4.88</span></td><td class="num">₩517,684<span class="p">1인 약 12.9만</span></td><td class="num">₩455,932<span class="p">1인 약 11.4만</span></td><td>무료 1대, 사전 예약. 호스트가 거리와 좁은 진입로를 미리 언급해 미니밴 확인 필수</td></tr>
+        <tr><td><span class="tier">중저가</span><b><a href="https://www.airbnb.co.kr/rooms/1054627450692652760">2LDK 아파트</a></b><span class="p">오노조시, 가스가바루역 도보 6분, 하카타까지 17분 · 방 2, 침대 5, 욕실 1.5 · 평점 4.7</span></td><td class="num">검색 결과 없음</td><td class="num">₩740,807<span class="p">1인 약 18.5만</span></td><td>지정 1대 무료, 위치는 사전 안내</td></tr>
+        <tr><td><span class="tier">중가</span><b><a href="https://www.airbnb.co.kr/rooms/1602740234579924741">공항 근처 단독주택</a></b><span class="p">공항까지 차로 11분 · 방 3, 침대 5, 욕실 1.5 · 평점 4.65</span></td><td class="num">검색 결과 없음</td><td class="num">₩991,872<span class="p">1인 약 24.8만</span></td><td>무료 3대. 미니밴이 들어갈 가능성이 가장 높고 공항 동선이 가장 짧음</td></tr>
+        <tr><td><span class="tier">고가</span><b><a href="https://www.airbnb.co.kr/rooms/1382454627615944695">2025년 신축 단독주택</a></b><span class="p">하카타구, 요시즈카역 도보 5분 · 방 2, 침대 5, 욕실 1 · 평점 4.79</span></td><td class="num">₩1,602,154<span class="p">1인 약 40.1만</span></td><td class="num">₩1,335,129<span class="p">1인 약 33.4만</span></td><td>건물 앞 1대</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">9월 28일 에어비앤비 검색(4인, 무료 주차 필터) 총액입니다. "검색 결과 없음"은 그 날짜 검색에 나오지 않은 것이라 이미 예약됐을 수 있습니다.</p>
+  <ul class="plain">
+    <li><b>미니밴 확인:</b> 네 곳 모두 숙소 페이지에 차 크기 제한이 적혀 있지 않습니다. 예약 전에 호스트에게 이렇게 보내세요: "トヨタ・ノア（全長4.7m・幅1.73m・高さ1.9m）で伺います。駐車できますか？ / We'll come in a Toyota Noah minivan (L 4.7m, W 1.73m, H 1.9m). Will it fit in your parking space?"</li>
+    <li><b>합법 숙소인지:</b> 일본 민박은 신고번호(届出番号)가 있어야 합법입니다. 숙소 페이지에서 번호를 확인하세요.</li>
+    <li><b>목욕:</b> 대욕장이 없으니 2일차 온천 일정과 묶으세요. 쓰레기 분리와 소음 규칙이 엄격하고, 숙박세(1인 1박 ¥200~500)가 따로 붙을 수 있습니다.</li>
+  </ul>
+</section>
+
+<!-- ===== FOOD ===== -->
+<section id="food">
+  <p class="kicker">Eat</p>
+  <h2>맛집: 무엇을 언제 먹을까</h2>
+  <p class="sub">일정표에 넣은 곳과 대안을 종류별로 모았습니다. 가격은 1인 기준이고 9월 말 공식·예약 페이지를 따랐습니다.</p>
+  <div class="list">
+    <div class="item"><p class="cat">모츠나베 · 1일차 저녁</p><h4>모츠나베 야마나카 하카타점 <span class="jp">もつ鍋やま中</span></h4><p>후쿠오카 대표 모츠나베 전문점. 1인분 ¥2,480 (2인분부터), 코스 ¥4,980, 술을 마시면 자릿세 ¥440.</p><p class="meta">TableCheck · 전화 · 카드 가능</p></div>
+    <div class="item"><p class="cat">모츠나베 · 개별실</p><h4>모츠나베 마에다야 총본점 <span class="jp">前田屋</span></h4><p>하카타역 동쪽. 1인분 ¥2,068, 활오징어가 포함된 코스 ¥5,280~7,980. 개별실과 한국어 메뉴가 있습니다.</p><p class="meta">핫페퍼 · 전화 · 카드 가능</p></div>
+    <div class="item"><p class="cat">모츠나베 · 가성비</p><h4>모츠나베 라쿠텐치 <span class="jp">楽天地</span></h4><p>점포가 19곳이라 자리 잡기 쉽습니다. 1인분 ¥1,771, 코스 ¥3,399.</p><p class="meta">전화 0120-869-107 · 카드 가능</p></div>
+    <div class="item"><p class="cat">미즈타키 (닭 전골)</p><h4>하카타 하나미도리 나카스 본점 <span class="jp">博多華味鳥</span></h4><p>뽀얀 닭 육수 전골. 코스 ¥4,500~8,500, 한국어 응대가 됩니다.</p><p class="meta">Toreta · 전화 · 카드 가능</p></div>
+    <div class="item"><p class="cat">미즈타키 · 고급</p><h4>도리덴 <span class="jp">とり田</span></h4><p>코스 ¥7,700~11,000. 24시간 이내 취소하면 100%를 냅니다.</p><p class="meta">TableCheck · 카드 필수</p></div>
+    <div class="item"><p class="cat">활오징어 · 3일차 회식</p><h4>가와타로 나카스 본점 <span class="jp">河太郎</span></h4><p>투명한 요부코산 오징어 활어회. 코스 ¥7,700·¥11,000 (+10%), 일·공휴일 17:00~21:30. 파도가 높아 오징어가 안 들어오면 일찍 닫을 수 있습니다.</p><p class="meta">온라인 · 092-271-2133 · 한국어 메뉴</p></div>
+    <div class="item"><p class="cat">야키니쿠 · 회식 대안</p><h4>야키니쿠 게이슈 하루요시점 <span class="jp">焼肉 慶州</span></h4><p>강변 전망에 개별실 7개, 17:00~04:00. 1인 ¥5,000~6,000 이상.</p><p class="meta">전화 · 핫페퍼 (3일 전까지 요청) · 카드 가능</p></div>
+    <div class="item"><p class="cat">야키토리 · 2일차 저녁</p><h4>하치베 가미닌바시도리점 <span class="jp">八兵衛</span></h4><p>삼겹살 꼬치와 초간장 양배추가 나오는 하카타식. ¥5,000~8,000에 오토시 ¥650.</p><p class="meta">핫페퍼 · 카드 가능</p></div>
+    <div class="item"><p class="cat">야키토리 · 닭껍질</p><h4>가와야 게고점 <span class="jp">かわ屋</span></h4><p>돌돌 말아 구운 닭껍질 꼬치로 유명한 곳. 약 ¥3,000, 수요일 휴무.</p><p class="meta">카드 불가 · PayPay 가능</p></div>
+    <div class="item"><p class="cat">한입 교자</p><h4>호운테이 나카스 본점 · 테츠나베 나카스 본점</h4><p>호운테이 <span class="jp">宝雲亭</span>은 1949년 원조로 8개 ¥550, 테츠나베 <span class="jp">鉄なべ</span>는 철판째 나오는 7개 ¥561에 매일 영업합니다.</p><p class="meta">호운테이 TableCheck · 테츠나베 핫페퍼</p></div>
+    <div class="item"><p class="cat">라멘 · 예약 없음</p><h4>이치란 · 잇소우 · 신신 · 나가하마야</h4><p>이치란 본사총본점 24시간 ¥1,080. 하카타 잇소우는 대기 1시간 이상. 신신 텐진 본점 11:00~03:00 (수요일 휴무). 간소 나가하마야는 새벽 5시부터 ¥550.</p><p class="meta">잇소우·나가하마야·잇코샤는 현금만</p></div>
+    <div class="item"><p class="cat">아침 · 4일차</p><h4>간소 하카타 멘타이주 <span class="jp">元祖博多めんたい重</span></h4><p>7:00~22:30, 멘타이주 ¥1,980. 7:30~8:30과 17시 이후는 EPARK로 예약, 그 외엔 번호표.</p><p class="meta">EPARK 온라인 (전화 불가)</p></div>
+    <div class="item"><p class="cat">공항 가는 길</p><h4>덴푸라 히라오 본점 · 마키노 우동 공항점</h4><p>히라오 <span class="jp">天ぷらひらお</span>는 갓 튀긴 튀김 정식, 10:30~21:30, 주차장 있음. 마키노 우동 <span class="jp">牧のうどん</span>은 10:00~23:00, 40대 주차, 셋째 수요일 휴무.</p><p class="meta">히라오 현금만</p></div>
+    <div class="item"><p class="cat">야타이 (포장마차)</p><h4>나카스 · 텐진 · 나가하마</h4><p>18~19시에 열어 자정~새벽 2시에 닫습니다. 예약과 화장실이 없고 1인 1메뉴, 1시간 정도가 매너입니다. 비바람이 불면 쉬고 일·월 휴무가 많으니 금·토 밤에 가세요.</p><p class="meta">대부분 현금 · 일부 QR 결제</p></div>
+  </div>
+</section>
+
+<!-- ===== TIPS ===== -->
+<section id="tips">
+  <p class="kicker">Tips</p>
+  <h2>예약 전에 알아둘 것</h2>
+
+  <h3>골프장 예약</h3>
+  <ul class="plain">
+    <li><b>실제로 치는 사람 이름으로 예약하세요.</b> 아소 이이즈카, 더 클래식, 센트럴 후쿠오카, 야스고원은 여행사·대리 예약을 받지 않습니다. 아소 이이즈카는 적발되면 플레이를 거부하고 취소료 100%를 받습니다.</li>
+    <li><b>외국인 조건부터 확인하세요.</b> 회원 동반이 필요한 곳(게야, 퀸즈힐, 라이잔, 센추리, 시마 시사이드), 일본어 가능자가 필요한 곳(더 클래식, 야스고원), 입국 당일 플레이를 거절하는 곳(아소 이이즈카, JR 우치노, 야스고원)이 있습니다.</li>
+    <li><b>동반자 이름 등록:</b> 아소 이이즈카는 플레이 1주일 전까지 4명 이름을 등록해야 합니다.</li>
+    <li><b>주말은 4인 1조가 기본입니다.</b> 2인은 거절되거나 1인당 ¥1,000~3,300, 3인은 ¥550~1,100이 더 붙습니다.</li>
+    <li><b>취소료가 일찍 붙습니다.</b> 후쿠오카 국제는 14일 전부터 1조 ¥8,000(주말), 치쿠시가오카는 7일 전부터 ¥8,000~10,000, 아소 이이즈카는 3일 전부터 100% × 인원입니다. 비 예보 때문에 취소해도 부과되고, 골프장이 휴장할 때만 면제됩니다. 3일 이내 취소는 GORA가 아니라 골프장에 전화해야 합니다.</li>
+    <li><b>GORA 가입:</b> 라쿠텐 ID가 필요합니다. 한국 휴대폰 번호와 이메일을 정확히 넣으세요. 치쿠시가오카처럼 연락처가 없으면 해외 예약을 받지 않는 곳이 있습니다. PGM 계열(후쿠오카 국제)은 한국어 예약 페이지가 있습니다.</li>
+  </ul>
+
+  <h3>요금에 포함되는 것과 아닌 것</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th scope="col">항목</th><th scope="col">포함 여부</th><th scope="col">메모</th></tr></thead>
+      <tbody>
+        <tr><td>그린피 · 카트</td><td>포함</td><td>표시 요금에 4~5인승 카트 포함</td></tr>
+        <tr><td>골프장 이용세 · 소비세</td><td>포함</td><td>이용세는 후쿠오카현 ¥500~1,200. 이번 3곳은 ¥500</td></tr>
+        <tr><td>점심</td><td>별도</td><td>¥1,500~3,000에 음료 별도. 점심 포함 플랜도 있음</td></tr>
+        <tr><td>캐디</td><td>별도 (셀프가 기본)</td><td>아소 이이즈카 +¥2,000, 더 클래식 +¥3,980</td></tr>
+        <tr><td>락커 · 목욕</td><td>보통 포함</td><td>PGM 계열(후쿠오카 국제)은 ¥440 별도</td></tr>
+        <tr><td>렌탈 클럽</td><td>별도</td><td>세트당 ¥3,300 안팎, 여럿이 나눠 쓸 수 없음, 미리 예약</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>복장과 목욕탕</h3>
+  <ul class="plain">
+    <li>아소 이이즈카와 더 클래식은 11월에 재킷(블레이저)을 입고 들어가고 나와야 합니다. 셔츠는 바지 안에 넣고, 청바지·카고바지·티셔츠·샌들은 안 되며, 신발은 소프트 스파이크만 됩니다.</li>
+    <li>목욕탕에서는 몸을 씻은 뒤 들어가고 수건은 탕에 넣지 않습니다. 문신이 있으면 입장을 거절하는 곳이 많습니다. 수건과 세면도구는 대부분 비치돼 있습니다.</li>
+    <li>캐디와 직원에게 팁은 주지 않습니다.</li>
+  </ul>
+
+  <h3>식당 예약</h3>
+  <ul class="plain">
+    <li><b>TableCheck:</b> 한국 전화번호와 카드로 예약되고 한국어 화면이 있습니다. 가게 정책에 따라 카드가 보증으로 잡힙니다.</li>
+    <li><b>타베로그 외국인 예약:</b> 한국어·영어로 약 6만 곳을 예약할 수 있고 카드가 필요합니다. 일반 일본어 예약 폼은 해외 번호를 거부할 수 있습니다.</li>
+    <li><b>핫페퍼:</b> 일본 번호 문자 인증이 필요할 수 있습니다. 막히면 호텔 프런트에 전화 예약을 부탁하세요.</li>
+    <li><b>캐치테이블:</b> 일본 OMAKASE와 연동됩니다 (좌석당 ¥390 수수료). 후쿠오카 식당이 얼마나 있는지는 앱에서 확인하세요.</li>
+    <li>당일 취소와 노쇼는 100% 청구가 흔합니다. 이자카야에는 기본 안주 값인 오토시(お通し) ¥429~650이 붙고, 주말에는 2시간 제한이 흔합니다. 실내는 금연입니다 (흡연 가능 표시가 있는 작은 바만 예외).</li>
+    <li>4명이면 테이블석(テーブル席)이나 개별실(個室)을 요청하세요. 토·일 저녁은 지금 예약해 두는 게 안전하고, 미즈타키 나가노는 한 달 전에 전화로만 예약을 받습니다.</li>
+    <li>현금만 받는 곳: 야타이, 잇소우, 나가하마야, 잇코샤, 히라오, 다이치노 우동, 기온 테츠나베.</li>
+  </ul>
+
+  <h3>운전</h3>
+  <ul class="plain">
+    <li><b>서류:</b> 제네바 협약 국제운전면허증(종이, 발급 1년 이내), 한국 면허증, 여권(상륙 허가 스티커)을 모두 챙깁니다. 영문 운전면허증은 인정되지 않습니다.</li>
+    <li><b>좌측통행:</b> 방향지시등과 와이퍼 레버가 반대라 처음엔 와이퍼가 자주 움직입니다. 우회전은 마주 오는 차를 먼저 보내고, 빨간불에는 어느 방향으로도 돌 수 없습니다. 止まれ 표지와 철도 건널목에서는 완전히 멈춥니다.</li>
+    <li><b>고속도로:</b> ETC 차로는 속도를 줄여 지나가고, 카드가 없으면 일반(一般) 차로로 갑니다.</li>
+    <li><b>주차:</b> 호텔 주차장의 출차 가능 시간을 꼭 확인하세요. 새벽에 차를 못 빼는 곳이 있습니다.</li>
+  </ul>
+
+  <h3>입국 · 돈 · 날씨</h3>
+  <ul class="plain">
+    <li>Visit Japan Web은 필수는 아니지만 입국과 세관이 빨라집니다. 한국인은 무비자 90일이고, 사전 입국 허가(JESTA)는 아직 시행 전입니다.</li>
+    <li>카드가 대부분 되지만 야타이·라멘·온천용으로 1인 ¥30,000 정도의 현금을 챙기세요.</li>
+    <li>11월 하순 후쿠오카는 평년 기준 낮 15℃ 안팎, 아침 8℃ 안팎입니다. 아침 티오프는 쌀쌀하니 방풍 재킷, 겨울 장갑, 핫팩(カイロ, 편의점 판매)을 준비하세요.</li>
+  </ul>
+</section>
+
+<!-- ===== PACK ===== -->
+<section id="pack">
+  <p class="kicker">Checklist</p>
+  <h2>예약·준비물 체크리스트</h2>
+  <p class="sub screen-only">체크한 항목은 이 브라우저에만 저장됩니다. 일행은 각자 자기 휴대폰에서 체크하면 됩니다.</p>
+
+  <h3>지금 예약할 것</h3>
+  <ul class="checks">
+    <li><label><input type="checkbox" id="c-golf1"><span>치쿠시가오카 (또는 더 클래식) 스루<small>A안 금 · B안 목 · GORA 연락처 등록 필수</small></span></label></li>
+    <li><label><input type="checkbox" id="c-golf2"><span>후쿠오카 국제 토 08:28<small>A안·B안 모두 토요일 · PGM 한국어 페이지 또는 GORA</small></span></label></li>
+    <li><label><input type="checkbox" id="c-golf3"><span>아소 이이즈카 (명문)<small>A안 일 08:35~ · B안 금 평일 · 본인 명의, 1주일 전 동반자 등록</small></span></label></li>
+    <li><label><input type="checkbox" id="c-car"><span>렌터카 노아·복시급 + ETC 카드<small>공항 국제선 인수 · 월요일 반납</small></span></label></li>
+    <li><label><input type="checkbox" id="c-hotel"><span>호텔 3박 + 주차 예약<small>미니밴 크기 제한과 새벽 출차 확인</small></span></label></li>
+    <li><label><input type="checkbox" id="c-dinner"><span>2·3일차 저녁 식당<small>A안 토·일 · B안 금·토 · 하치베 또는 호운테이, 가와타로 또는 게이슈</small></span></label></li>
+    <li><label><input type="checkbox" id="c-flight"><span>항공권 (첫날 08:30 전 도착편)<small>A안 금 출발·월 귀국, B안 목 출발·일 귀국 운임 비교 · 골프백 규정 확인</small></span></label></li>
+    <li><label><input type="checkbox" id="c-sumo"><span>스모 리세일 티켓 (선택)<small>QR 티켓은 3일 전까지 구매</small></span></label></li>
+  </ul>
+
+  <h3>챙길 것</h3>
+  <ul class="checks">
+    <li><label><input type="checkbox" id="p-passport"><span>여권 · Visit Japan Web QR</span></label></li>
+    <li><label><input type="checkbox" id="p-idp"><span>국제운전면허증(종이) + 한국 면허증<small>운전할 사람 전원</small></span></label></li>
+    <li><label><input type="checkbox" id="p-jacket"><span>재킷(블레이저)<small>3일차 아소 이이즈카 입장·퇴장용</small></span></label></li>
+    <li><label><input type="checkbox" id="p-shoes"><span>소프트 스파이크 골프화</span></label></li>
+    <li><label><input type="checkbox" id="p-wear"><span>카라 셔츠 · 긴 바지 3벌<small>청바지·카고바지 불가</small></span></label></li>
+    <li><label><input type="checkbox" id="p-warm"><span>방풍 재킷 · 넥워머 · 겨울 장갑 · 핫팩</span></label></li>
+    <li><label><input type="checkbox" id="p-balls"><span>볼 · 티 · 마커 · 우비</span></label></li>
+    <li><label><input type="checkbox" id="p-cash"><span>해외 결제 카드 + 현금 ¥30,000</span></label></li>
+    <li><label><input type="checkbox" id="p-sim"><span>eSIM 또는 포켓 와이파이</span></label></li>
+    <li><label><input type="checkbox" id="p-plug"><span>일본용 플러그 어댑터 (A타입, 110V)</span></label></li>
+  </ul>
+</section>
+
+<!-- ===== BUDGET ===== -->
+<section id="budget">
+  <p class="kicker">Budget</p>
+  <h2>1인 경비: A안 vs B안</h2>
+  <div class="tbl-wrap budget">
+    <table>
+      <caption class="sr-only">A안과 B안의 1인 현지 경비 항목별 비교</caption>
+      <thead><tr><th scope="col">항목</th><th scope="col" class="num">A안 11/20~23</th><th scope="col" class="num">B안 11/19~22</th></tr></thead>
+      <tbody>
+        <tr><td>골프 3라운드<span class="p">A: ¥15,000 + ¥22,400 + ¥22,000 · B: ¥15,000 + ¥14,000 + ¥22,400</span></td><td class="num">¥59,400</td><td class="num">¥51,400</td></tr>
+        <tr><td>골프장 점심 · 음료 · 락커</td><td class="num">¥5,000~7,000</td><td class="num">¥5,000~7,000</td></tr>
+        <tr><td>교통 (렌터카 1/4)<span class="p">대여 기간이 같음</span></td><td class="num">¥14,600~21,400</td><td class="num">¥14,600~21,400</td></tr>
+        <tr><td>숙소 3박 (호텔 2인 1실)<span class="p">아파 하카타역 동쪽 ~ 칸데오 텐진, 9/28 3박 요금</span></td><td class="num">¥43,000~62,500</td><td class="num">¥38,500~58,000</td></tr>
+        <tr><td>식비<span class="p">저녁 3번, 야타이, 라멘, 아침</span></td><td class="num">¥25,000~35,000</td><td class="num">¥25,000~35,000</td></tr>
+        <tr><td>온천 · 관광 · 기타<span class="p">스모를 보면 의자석 ¥2,500~6,000</span></td><td class="num">¥3,000~10,000</td><td class="num">¥3,000~10,000</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>합계 (호텔)</td><td class="num">¥150,000~195,300<span class="p">약 131만~170만 원</span></td><td class="num">¥137,500~182,800<span class="p">약 120만~159만 원</span></td></tr>
+        <tr><td>합계 (에어비앤비)<span class="p">무료 주차 숙소 4곳, 1인 A ¥15,000~46,000 · B ¥13,000~38,500</span></td><td class="num">¥122,000~178,800<span class="p">약 106만~156만 원</span></td><td class="num">¥112,000~163,300<span class="p">약 97만~142만 원</span></td></tr>
+        <tr><td>항공 왕복<span class="p">아침편 3개 (제주항공 ~ 아시아나)</span></td><td class="num">₩38만~44만</td><td class="num">₩42만~49만</td></tr>
+        <tr><td>항공 포함 합계 (호텔)</td><td class="num">약 169만~214만 원</td><td class="num">약 162만~208만 원</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <p class="small" style="margin-top:8px">환율은 100엔 = 870원(2026년 9월 평균)입니다. 더 클래식으로 1R을 바꾸면 두 안 모두 +¥2,070입니다. 항공은 <a href="#flights">항공권</a>의 아침편 왕복 요금 범위이고, 골프백을 무료 허용량 안에서 부치는 조건입니다.</p>
+</section>
+
+<footer>
+  <p>조사 기준일은 2026년 9월 28일입니다. 항공 요금은 구글 항공권, 호텔은 라쿠텐 트래블, 에어비앤비는 검색 결과, 골프장은 GORA와 공식 요금표, 렌터카는 공식 요금표와 비교 사이트 기준입니다. 티타임, 객실, 요금은 실시간으로 바뀌니 예약 직전에 다시 확인하세요. 대행(대리운전) 요금은 직접 확인하지 못했고, 항공사 골프백 규정은 공식 안내 대신 2025~2026년 기사와 후기로 확인했습니다.</p>
+  <p>주요 출처:
+    <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400002/">아소 이이즈카 GORA 안내</a> ·
+    <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400033/">치쿠시가오카 GORA 안내</a> ·
+    <a href="https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/400040/">후쿠오카 국제 GORA 안내</a> ·
+    <a href="https://cm-g.co.jp/the-classic/guide/price/">더 클래식 요금·이용 규정</a> ·
+    <a href="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s4111.html">국립천문대 일출·일몰</a> ·
+    <a href="https://rent.toyota.co.jp/affiliate_rental/service/car/class/charge.aspx?searchKbn=4">도요타 렌터카 요금</a> ·
+    <a href="https://www.mk-group.co.jp/fukuoka/plan/golf.php">MK 후쿠오카 골프 정액</a> ·
+    <a href="https://www.taxi-fukcty.or.jp/charge">후쿠오카시 택시 요금</a> ·
+    <a href="https://sumo.pia.jp/en/">스모 티켓</a> ·
+    <a href="https://www.npa.go.jp/bureau/traffic/insyu/info.html">일본 경찰청 음주운전</a>
+  </p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  function el(tag, cls) { var n = document.createElement(tag); if (cls) n.className = cls; return n; }
+
+  /* ---------- tooltip (values lead, labels follow) ---------- */
+  var tip = el("div", "tip");
+  tip.setAttribute("role", "tooltip");
+  document.body.appendChild(tip);
+  var owner = null;
+  var lastPointer = "mouse";
+  document.addEventListener("pointerdown", function (e) { lastPointer = e.pointerType || "mouse"; }, true);
+
+  function fillTip(t) {
+    tip.replaceChildren();
+    var b = el("b"); b.textContent = t.dataset.tipValue || "";
+    var s = el("span"); s.textContent = t.dataset.tipLabel || "";
+    tip.appendChild(b); tip.appendChild(s);
+  }
+  function placeTip(x, y) {
+    var r = tip.getBoundingClientRect();
+    var left = x + 14, top = y + 16;
+    if (left + r.width > window.innerWidth - 8) left = x - r.width - 14;
+    if (left < 8) left = 8;
+    if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+    if (top < 8) top = 8;
+    tip.style.left = left + "px";
+    tip.style.top = top + "px";
+  }
+  function showTip(t, x, y) { owner = t; fillTip(t); tip.classList.add("on"); placeTip(x, y); }
+  function hideTip() { owner = null; tip.classList.remove("on"); }
+  function anchorOf(t) { var r = t.getBoundingClientRect(); return [r.left + r.width / 2, r.bottom]; }
+
+  function bindTip(t) {
+    t.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") showTip(t, e.clientX, e.clientY); });
+    t.addEventListener("pointermove", function (e) { if (e.pointerType === "mouse" && owner === t) placeTip(e.clientX, e.clientY); });
+    t.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") hideTip(); });
+    t.addEventListener("click", function (e) {
+      if (lastPointer === "mouse") return;
+      e.stopPropagation();
+      if (owner === t) { hideTip(); return; }
+      var a = anchorOf(t); showTip(t, a[0], a[1]);
+    });
+    t.addEventListener("focus", function () {
+      var fv = false;
+      try { fv = t.matches(":focus-visible"); } catch (err) { fv = true; }
+      if (fv) { var a = anchorOf(t); showTip(t, a[0], a[1]); }
+    });
+    t.addEventListener("blur", hideTip);
+  }
+  document.addEventListener("click", function () { if (lastPointer !== "mouse") hideTip(); });
+  window.addEventListener("scroll", function () { if (owner) hideTip(); }, { passive: true });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+
+  /* ---------- round timeline ---------- */
+  var START = 6 * 60, END = 18 * 60, SPAN = END - START;
+  function mins(s) { var p = s.split(":"); return (+p[0]) * 60 + (+p[1]); }
+  function pct(s) { return ((mins(s) - START) / SPAN) * 100; }
+
+  var SUN = { rise: "06:55", set: "17:13" };
+  // [start, end, kind, tooltip label, inline label]
+  var CHIKU = [
+    ["08:00", "09:00", "other", "입국 심사 · 골프백 수령", "입국"],
+    ["09:00", "09:40", "other", "렌터카 인수 (국제선 1층 카운터)", "차량"],
+    ["09:40", "10:20", "other", "공항 → 치쿠시가오카 GC", "이동"],
+    ["10:20", "11:22", "other", "체크인 · 간단한 식사 · 퍼팅 연습", "준비"],
+    ["11:22", "13:35", "play", "전반 9홀 (스루 플레이)", "OUT"],
+    ["13:45", "15:55", "play", "후반 9홀 (전반 뒤 10분 휴식)", "IN"],
+    ["15:55", "16:35", "other", "목욕 · 정산", "목욕"],
+    ["16:35", "17:15", "other", "골프장 → 하카타 호텔", "이동"]
+  ];
+  var KOKUSAI = [
+    ["06:50", "07:40", "other", "호텔 → 후쿠오카 국제 CC (와카미야 IC)", "이동"],
+    ["07:40", "08:28", "other", "체크인 · 퍼팅 연습 (연습장 휴장)", "준비"],
+    ["08:28", "10:43", "play", "전반 9홀", "OUT"],
+    ["10:43", "11:50", "lunch", "클럽하우스 점심 · 후반 출발은 마스터 실이 지정", "점심"],
+    ["11:50", "14:05", "play", "후반 9홀", "IN"],
+    ["14:05", "14:40", "other", "목욕 (락커·목욕 ¥440)", "목욕"],
+    ["14:40", "15:25", "other", "골프장 → 하카타", "이동"]
+  ];
+  function aso(tee, turn, back, done) {
+    return [
+      ["07:05", "07:50", "other", "호텔 → 아소 이이즈카 GC", "이동"],
+      ["07:50", tee, "other", "재킷 차림 입장 · 체크인 · 연습", "준비"],
+      [tee, turn, "play", "전반 9홀", "OUT"],
+      [turn, back, "lunch", "클럽하우스 점심", "점심"],
+      [back, done, "play", "후반 9홀", "IN"],
+      [done, "14:50", "other", "목욕 · 재킷 차림 퇴장", "목욕"],
+      ["14:50", "15:40", "other", "골프장 → 하카타 호텔", "이동"]
+    ];
+  }
+  var ROWS_A = [
+    { day: "1일차", date: "11/20 금", segs: CHIKU },
+    { day: "2일차", date: "11/21 토", segs: KOKUSAI },
+    { day: "3일차", date: "11/22 일", segs: aso("08:42", "10:57", "12:00", "14:15") }
+  ];
+  var ROWS_B = [
+    { day: "1일차", date: "11/19 목", segs: CHIKU },
+    { day: "2일차", date: "11/20 금", segs: aso("08:40", "10:55", "12:00", "14:15") },
+    { day: "3일차", date: "11/21 토", segs: KOKUSAI }
+  ];
+
+  function buildTimeline(tl, ROWS, plan) {
+    if (!tl) return;
+    var frag = document.createDocumentFragment();
+
+    // overlay: night bands, gridlines, sun lines (spans head + 3 tracks)
+    var plot = el("div", "tl-plot");
+    plot.style.gridRow = "1 / span 4";
+    var nb1 = el("div", "nightband"); nb1.style.left = "0"; nb1.style.width = pct(SUN.rise) + "%";
+    var nb2 = el("div", "nightband"); nb2.style.left = pct(SUN.set) + "%"; nb2.style.right = "0";
+    plot.appendChild(nb1); plot.appendChild(nb2);
+    for (var h = 6; h <= 18; h += 2) {
+      var g = el("div", "gridline"); g.style.left = ((h * 60 - START) / SPAN * 100) + "%";
+      if (h === 18) g.style.marginLeft = "-1px";
+      plot.appendChild(g);
+    }
+    [SUN.rise, SUN.set].forEach(function (t) {
+      var ln = el("div", "sunline"); ln.style.left = pct(t) + "%"; plot.appendChild(ln);
+    });
+    frag.appendChild(plot);
+
+    // head row: sun labels
+    var headSpacer = el("div"); headSpacer.style.gridColumn = "1"; headSpacer.style.gridRow = "1";
+    frag.appendChild(headSpacer);
+    var head = el("div", "tl-head"); head.style.gridRow = "1";
+    var rise = el("span", "sunlabel rise"); rise.textContent = "일출 " + SUN.rise; rise.style.left = pct(SUN.rise) + "%";
+    var set = el("span", "sunlabel set"); set.textContent = "일몰 " + SUN.set; set.style.left = pct(SUN.set) + "%";
+    head.appendChild(rise); head.appendChild(set);
+    frag.appendChild(head);
+
+    // rows
+    ROWS.forEach(function (row, i) {
+      var r = i + 2;
+      var lab = el("div", "tl-label"); lab.style.gridColumn = "1"; lab.style.gridRow = String(r);
+      var b = el("b"); b.textContent = row.day;
+      lab.appendChild(b); lab.appendChild(document.createTextNode(row.date));
+      frag.appendChild(lab);
+
+      var track = el("div", "tl-track"); track.style.gridRow = String(r);
+      row.segs.forEach(function (sg) {
+        var L = pct(sg[0]), R = pct(sg[1]);
+        var s = el("span", "seg " + sg[2]);
+        s.style.left = "calc(" + L + "% + 1px)";
+        s.style.width = "calc(" + (R - L) + "% - 2px)";
+        s.tabIndex = 0;
+        s.setAttribute("aria-label", plan + " " + row.day + " " + sg[0] + "부터 " + sg[1] + "까지 " + sg[3]);
+        s.dataset.tipValue = sg[0] + "–" + sg[1];
+        s.dataset.tipLabel = plan + " " + row.day + " · " + sg[3];
+        var inn = el("span", "in"); inn.textContent = sg[4]; inn.setAttribute("aria-hidden", "true");
+        s.appendChild(inn);
+        bindTip(s);
+        track.appendChild(s);
+      });
+      frag.appendChild(track);
+    });
+
+    // axis
+    var axSpacer = el("div"); axSpacer.style.gridColumn = "1"; axSpacer.style.gridRow = "5";
+    frag.appendChild(axSpacer);
+    var axis = el("div", "tl-axis"); axis.style.gridRow = "5"; axis.setAttribute("aria-hidden", "true");
+    for (var k = 6; k <= 18; k += 2) {
+      var tk = el("span"); tk.textContent = (k < 10 ? "0" : "") + k + ":00";
+      tk.style.left = ((k * 60 - START) / SPAN * 100) + "%";
+      axis.appendChild(tk);
+    }
+    frag.appendChild(axis);
+    tl.appendChild(frag);
+
+    // show a label inside a segment only when it fits with padding
+    var fit = function () {
+      tl.querySelectorAll(".seg").forEach(function (s) {
+        var inn = s.querySelector(".in");
+        if (!inn) return;
+        inn.hidden = false;
+        if (inn.offsetWidth + 8 > s.clientWidth) inn.hidden = true;
+      });
+    };
+    fit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    if ("ResizeObserver" in window) new ResizeObserver(fit).observe(tl);
+    else window.addEventListener("resize", fit);
+  }
+  buildTimeline(document.getElementById("tl"), ROWS_A, "A안");
+  buildTimeline(document.getElementById("tl-b"), ROWS_B, "B안");
+
+  /* ---------- cost range bars ---------- */
+  var MAX = 80000;
+  document.querySelectorAll(".range").forEach(function (r) {
+    var lo = +r.dataset.lo, hi = +r.dataset.hi;
+    var ext = el("span", "range-ext"); ext.style.width = (hi / MAX * 100) + "%";
+    var solid = el("span", "range-solid"); solid.style.width = (lo / MAX * 100) + "%";
+    r.appendChild(ext); r.appendChild(solid);
+    bindTip(r);
+  });
+
+  /* ---------- checklist (per-viewer, browser storage) ---------- */
+  var KEY = "fuk-golf-2026-checks";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  document.querySelectorAll(".checks input[type=checkbox]").forEach(function (cb) {
+    if (saved[cb.id]) cb.checked = true;
+    cb.addEventListener("change", function () {
+      saved[cb.id] = cb.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) { /* storage unavailable */ }
+    });
+  });
+
+  /* ---------- section nav highlight ---------- */
+  var navUl = document.querySelector(".topnav ul");
+  var links = Array.prototype.slice.call(document.querySelectorAll(".topnav a"));
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && navUl) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var a = byId[en.target.id];
+        if (!a) return;
+        links.forEach(function (x) { x.removeAttribute("aria-current"); });
+        a.setAttribute("aria-current", "true");
+        var target = navUl.scrollLeft + (a.getBoundingClientRect().left - navUl.getBoundingClientRect().left) - 16;
+        try { navUl.scrollTo({ left: target, behavior: reduce ? "auto" : "smooth" }); } catch (e) { navUl.scrollLeft = target; }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    document.querySelectorAll("section[id]").forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+
+</body>
+</html>
